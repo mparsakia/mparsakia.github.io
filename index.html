@@ -86,7 +86,7 @@ TxtRotate.prototype.tick = function() {
   this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
   var that = this;
-  var delta = 230 - Math.random() * 100;
+  var delta = 250 - Math.random() * 100;
 
   if (this.isDeleting) { delta /= 2; }
 
@@ -132,7 +132,7 @@ window.onload = function() {
 <div class="homeimg">
 <img src="./banner.jpg" alt="code on computer screen">
 <div class="text">
-<h2>Michael Parsakia&#129505;'s <span class="txt-rotate" data-period="2000" data-rotate='["programming.", "sociology.", "photography.", "cybersecurity.", "web design.", "technology."]'></span></h2>
+<h2>Michael Parsakia&#129505;'s<div class="mobilebr"><br></div>&nbsp;<span class="txt-rotate" data-period="3000" data-rotate='["programming.", "sociology.", "photography.", "cybersecurity.", "web design.", "technology."]'></span></h2>
 </div>
 </div>
 <div class="widewrapper">
