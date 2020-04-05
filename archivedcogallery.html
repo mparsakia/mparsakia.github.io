@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WebDevTools: archived.co - Cargo External Gallery Formatter</title>
+<style>
+  body{
+    margin: 0 auto;
+    width: 1000px;
+    font-family:sans-serif;
+  }
+  button{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: monospace;
+  }
+  h1{
+    font-size: 18px;
+  }
+  a {
+    color: black;
+    text-decoration-color: #bfbfbf;
+  }
+  a:hover{
+    color: #009000;
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
+  .input{ 
+    white-space:pre;
+  }
+  .output{
+    border: #009000 solid 2px;
+    white-space:pre;
+    padding: 10px;
+    font-size: 14px;
+    font-family: monospace;
+  }
+  .heading{
+    font-size: 26px;
+    font-family: monospace;
+    padding: 10px 0px;
+  }
+  .info{
+    font-size: 14px;
+    font-family: monospace;
+    padding: 10px 0px;
+    color:#b0b0b0;
+    width: 500px;
+  }
+  .info a{
+    text-decoration: underline;
+    color: #bfbfbf;
+    border-bottom: 0;
+  }
+  .info a:hover{
+    color: #009000;
+    text-decoration: underline;
+    text-decoration-color: black;
+  }
+  #counter{
+    display: inline;
+  }
+  #counter p{
+    display: inline;
+  }
+  .warning{
+    font-weight: bold;
+    color: #9c9c9c;
+  }
+  #errorbox{
+    color:red;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    border: red solid 2px;
+    padding: 10px;
+    display: none;
+  }
+  #reverser{
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px;
+    margin: 5px 0;
+  }
+</style>  
+</head>
+<body>
+  
+  
+<script crossorigin="anonymous">  
+// These variables will be hoisted.
+ var outputtxt = "";
+ var keymap = new Map();                            
+ var thex = 0;
+ var metacounter = 0;
+ var arrlen = 0;
+ var errorstr = "";
+ var errorcount = 0;
+ var revtxtarea = "";
+
+  
+  function processvalues(){
+      document.getElementById("outputbox").innerText = "";          // Clear output box for sequential runs.
+      document.getElementById("errorbox").style.display = "none";   // Hide error box if it was shown for sequential runs. 
+      document.getElementById("errorbox").innerText = "";           // Clear error box for sequential runs.
+      thex = 0;                                                     // Reset process counter for sequential runs.
+      keymap.clear();                                               // Empty map for sequential runs.
+      outputtxt = "";                                               // Clear outputtxt holder for sequential runs.
+      metacounter = 0;                                              // Reset internal counter for sequential runs.
+      arrlen = 0;                                                   // Reset internal counter for sequential runs.
+      errorstr = "";                                                // Reset internal error string for sequential runs.
+      errorcount = 0;                                               // Reset error count for sequential runs.
+
+      var textarea = document.getElementById("inputbox").value;     // Get values from input box
+      var urlarray = textarea.split("\n");                          // Create array of links [strings] (each line is an element in the array)
+
+      for(var i = 0; i < urlarray.length; i++){                     // Attempt to get rid of null / newline elements in urlarray. (we could do regex checks for invalid urls, but this is ok for our scope)
+        if(urlarray[i] == ""){ urlarray.splice(i,1); i--; }         // If we find a match, we must move the iterator back b/c of splice to not skip the next element.
+      }             
+
+      document.getElementById("n").innerHTML = urlarray.length;     // Update denominator counter in the page (...of N)
+      arrlen = urlarray.length;                                     // Set internal counter for use in getMeta(...)
+
+      for(var i = 0; i < urlarray.length; i++){                     // Process the data with getMeta(...), for each i(url/idx) in array. 
+        getMeta(urlarray[i],i);                                     // Pass the data, and the index of the data (to keep sorted order, getMeta fills a map with i as index for the key)
+      }
+  } // end of processvalues
+  
+  function getMeta(url,idx){
+      var img = new Image();
+      var theinx = idx;
+      img.onload=imgfound;
+      img.onerror=imgerr;
+      img.src=url;
+
+      function imgfound(){
+          var tw = img.naturalWidth;
+          var th = img.naturalHeight;
+          var formattedimg = "<img width=\"" + tw + "\"" + " height=\"" + th + "\"" + " " + "src=\"" + url + "\">\n";     // The format CargoCollective's image gallery wants for external images, with w/h set in the html tag.
+          keymap.set(theinx,formattedimg);                            // store key value 
+          thex = thex + 1;                                            // Increment process counter 'x'
+          document.getElementById("x").innerHTML = thex;              // Write process counter to page
+          metacounter++;                                              // ++ internal counter once process is finished.
+          if(metacounter == arrlen){ writeOutput(); }                 // check if all are processed, yes = call writeoutput();  
+      }
+    
+      function imgerr(){
+        errorcount++;                                               // Increment error counter we will display to user if error occurs.
+        errorstr += url + "\n";                                     // Add the URL that could not be reached to the error string
+        metacounter++;                                              // Must increment this to get partial output if there is an error.
+        if(metacounter == arrlen){ writeOutput(); }                 // check if all are processed, yes = call writeoutput();  
+      }
+  } // end of getMeta  
+  
+  function writeOutput(){  
+      for(var j = 0; j <= keymap.size; j++){                              // Iterates over our map (key/value) and concatenates values to a string, by order of key.
+        if(keymap.get(j) != undefined){                                   // Error check, sometimes we get an undefined value in the map. Maybe off by one error.
+          outputtxt += keymap.get(j);
+        }
+      }
+      if(errorstr != ""){                                           // If there are errors, we will display a warning in the page.
+        document.getElementById("errorbox").style.display = "block";
+        var warningtxt = "WARNING! Errors were found in " + errorcount + " URLs:\n\n";
+        var postwarning = "\nThe program has only processed valid links, and the output below will NOT contain these images!"
+        document.getElementById("errorbox").innerText = warningtxt + errorstr + postwarning;
+      }
+    document.getElementById("outputbox").innerText = outputtxt;   // Write the entire string containing formatted data to the page.
+  } // end of writeOutput  
+  
+
+function reverseit(){
+	 revtxtarea = document.getElementById("outputbox").innerText;
+   revtxtarea = revtxtarea.split("\n").reverse().join("\n");
+   document.getElementById("outputbox").innerText = revtxtarea;
+} // end of reverseit
+</script>
+  
+  
+  
+  <div><p class="heading"><a href="https://www.archived.co">archived.co</a> - internal web development tools</p></div>
+  <h1>Input:</h1>
+  <textarea id="inputbox" class="input" placeholder="Paste the direct image links here IN ORDER&#10;The format should be as follows...&#10;(url)[enter/return]&#10;&#10;example:&#10;http://www.example.com/mypic.jpg&#10;http://www.example.com/another.jpeg&#10;http://www.example.com/xyz2.png&#10;http://www.example.com/etcetc2.png" name="message" rows="20" cols="139"></textarea>
+  <br>
+  <button type="button" onclick="processvalues();">RUN IT &#128640;</button>
+  <div id="counter">Finished: <p id="x"> x </p><p> of </p><p id="n"> n</p><p>.</p><br><br></div>
+  <div id="errorbox"></div>
+  <h1>Output:</h1>
+  <div id="outputbox" class="output"></div>
+  <button type="button" onclick="reverseit();" id="reverser">Reverse Output Order &#128260; (click only after finished running)</button>
+  <p class="info"><span class="warning">Caution: If the server for the linked image can not be reached (i.e. 404, image host doesn't respond, or other error) the program may halt. Simple error checking is implemented in this program, but not all errors may be caught. The program may say "finished 22/24" or similar. Double check your input, make sure the files are public, try to access the urls, then try again.<br><br></span>Program: Cargo Gallery Formatter<br>Version: 2.0<br>Created: 4/4/2020<br>Author: <a href="http://www.github.com/mparsakia">Michael Parsakia</a><br><br>Function: Parses input of image links separated by lines [enter/return key], outputs HTML image tags with width and height set. For use in Cargo's image galleries, where externally linked images must have their width and height set equal to the original images dimensions as paramaters for the gallery to work properly with externally linked images.<br><br>Note: The code does not do much to correct improper input. Please be sure the input is in the correct format.</p>
+</body>
+</html>                            
