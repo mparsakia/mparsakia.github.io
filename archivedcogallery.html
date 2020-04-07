@@ -6,7 +6,7 @@
 <style>
   body{
     margin: 0 auto;
-    width: 1000px;
+    width: 1100px;
     font-family:sans-serif;
   }
   button{
@@ -33,7 +33,7 @@
     border: #009000 solid 2px;
     white-space:pre;
     padding: 10px;
-    font-size: 14px;
+    font-size: 12px;
     font-family: monospace;
   }
   .heading{
@@ -60,13 +60,18 @@
   }
   #counter{
     display: inline;
+    border: #aaaaaa solid 1px;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 12px;
+    margin: 5px 0;
   }
   #counter p{
     display: inline;
   }
   .warning{
     font-weight: bold;
-    color: #9c9c9c;
+    color: #898989;
   }
   #errorbox{
     color:red;
@@ -77,7 +82,7 @@
     padding: 10px;
     display: none;
   }
-  #reverser{
+  #buttoncss{
     font-size: 14px;
     font-weight: normal;
     padding: 10px;
@@ -137,7 +142,8 @@
       function imgfound(){
           var tw = img.naturalWidth;
           var th = img.naturalHeight;
-          var formattedimg = "<img width=\"" + tw + "\"" + " height=\"" + th + "\"" + " " + "src=\"" + url + "\">\n";     // The format CargoCollective's image gallery wants for external images, with w/h set in the html tag.
+         // Format for external images, with w/h set in the html tag. (also requires enable zoom with data-src="src") [Cargo uses PhotoSwipe JS for galleries, inspect that for more help]
+          var formattedimg = "<img width=\"" + tw + "\"" + " height=\"" + th + "\"" + " " + "src=\"" + url + "\" data-src=\"" + url + "\">\n"; 
           keymap.set(theinx,formattedimg);                            // store key value 
           thex = thex + 1;                                            // Increment process counter 'x'
           document.getElementById("x").innerHTML = thex;              // Write process counter to page
@@ -174,6 +180,30 @@ function reverseit(){
    revtxtarea = revtxtarea.split("\n").reverse().join("\n");
    document.getElementById("outputbox").innerText = revtxtarea;
 } // end of reverseit
+  
+function copyClipboard() {
+  var elm = document.getElementById("outputbox");
+  // for Internet Explorer
+
+  if(document.body.createTextRange) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(elm);
+    range.select();
+    document.execCommand("Copy");
+    alert("Copied output to clipboard!");
+  }
+  else if(window.getSelection) {
+    // other browsers
+
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(elm);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    document.execCommand("Copy");
+    alert("Copied output to clipboard!");
+  }
+} // end of copyClipboard
 </script>
   
   
@@ -182,12 +212,12 @@ function reverseit(){
   <h1>Input:</h1>
   <textarea id="inputbox" class="input" placeholder="Paste the direct image links here IN ORDER&#10;The format should be as follows...&#10;(url)[enter/return]&#10;&#10;example:&#10;http://www.example.com/mypic.jpg&#10;http://www.example.com/another.jpeg&#10;http://www.example.com/xyz2.png&#10;http://www.example.com/etcetc2.png" name="message" rows="20" cols="139"></textarea>
   <br>
-  <button type="button" onclick="processvalues();">RUN IT &#128640;</button>
-  <div id="counter">Finished: <p id="x"> x </p><p> of </p><p id="n"> n</p><p>.</p><br><br></div>
+  <button type="button" id="buttoncss" onclick="processvalues();">RUN IT &#128640;</button>
+  <div id="counter">Finished: <p id="x"> x </p><p> of </p><p id="n"> n</p><p>.</p></div>
   <div id="errorbox"></div>
-  <h1>Output:</h1>
+  <h1>Output:</h1>  <button onclick="copyClipboard()" id="buttoncss">Copy output to clipboard 	&#128203;</button>
+  <button type="button" onclick="reverseit();" id="buttoncss">Reverse Output Order &#128260;</button>
   <div id="outputbox" class="output"></div>
-  <button type="button" onclick="reverseit();" id="reverser">Reverse Output Order &#128260; (click only after finished running)</button>
-  <p class="info"><span class="warning">Caution: If the server for the linked image can not be reached (i.e. 404, image host doesn't respond, or other error) the program may halt. Simple error checking is implemented in this program, but not all errors may be caught. The program may say "finished 22/24" or similar. Double check your input, make sure the files are public, try to access the urls, then try again.<br><br></span>Program: Cargo Gallery Formatter<br>Version: 2.0<br>Created: 4/4/2020<br>Author: <a href="http://www.github.com/mparsakia">Michael Parsakia</a><br><br>Function: Parses input of image links separated by lines [enter/return key], outputs HTML image tags with width and height set. For use in Cargo's image galleries, where externally linked images must have their width and height set equal to the original images dimensions as paramaters for the gallery to work properly with externally linked images.<br><br>Note: The code does not do much to correct improper input. Please be sure the input is in the correct format.</p>
+  <p class="info"><span class="warning">Caution: If the server for the linked image can not be reached (i.e. 404, image host doesn't respond, or other error) the program may halt. Simple error checking is implemented in this program, but not all errors may be caught. The program may say "finished 22/24" or similar. Double check your input, make sure the files are public, try to access the urls, then try again.<br><br></span>Program: Cargo Gallery Formatter<br>Version: 3.0<br>Updated: 4/6/2020<br>Author: <a href="http://www.github.com/mparsakia">Michael Parsakia</a><br><br>Function: Parses input of image links separated by lines [enter/return key], outputs HTML image tags with width and height set. For use in Cargo's image galleries, where externally linked images must have their width and height set equal to the original images dimensions as paramaters for the gallery to work properly with externally linked images.<br><br>Note: The code does not do much to correct improper input. Please be sure the input is in the correct format.</p>
 </body>
 </html>                            
