@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-148367832-1");
+    </script>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="Black Clock WebPage" />
+    <meta name="author" content="Michael Parsakia" />
+    <meta name="keywords" content="Contact,Michael Parsakia,Linkedin,Website" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        background-color: #000;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+      }
+      .clock {
+        color: rgb(45, 45, 45);
+        font-size: 88px;
+        font-family: "Courier Prime", monospace;
+        text-align: left;
+        line-height: 0.65;
+        margin-bottom: 0px;
+      }
+      .date {
+        color: rgb(35, 35, 35);
+        font-size: 52px;
+        font-family: "Courier Prime", monospace;
+        text-align: right;
+        line-height: 0.7;
+        margin-top: 0px;
+      }
+      .translatecenter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <script>
+      function datetime() {
+        var clock = new Date();
+        var date = new Date();
+        document.getElementById("clock").innerHTML = clock.toLocaleTimeString();
+        document.getElementById("date").innerHTML = date.toDateString();
+        window.document.title = clock.toLocaleTimeString();
+        return null;
+      }
+      setInterval(datetime, 1000);
+    </script>
+  </head>
+  <body>
+    <div class="translatecenter">
+      <p id="clock" class="clock"></p>
+      <p id="date" class="date"></p>
+    </div>
+  </body>
+</html>
