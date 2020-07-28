@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -76,20 +78,23 @@
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+        overflow-y: hidden;
         text-rendering: optimizeLegibility;
         font-kerning: normal;
       }
       .clock {
-        color: rgb(45, 45, 45);
-        font-size: 88px;
+        color: #202020;
+        font-size: 110px;
         font-family: "Courier Prime", monospace;
         text-align: left;
+        word-spacing: -35px;
         line-height: 0.65;
         margin-bottom: 0px;
       }
       .date {
-        color: rgb(35, 35, 35);
-        font-size: 52px;
+        color: #191919;
+        font-size: 34px;
+        word-spacing: -3px;
         font-family: "Courier Prime", monospace;
         text-align: right;
         line-height: 0.7;
@@ -99,22 +104,42 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -60%);
       }
+      /* [draggable="true"] {
+        cursor: move;
+      } */
     </style>
     <script>
       function datetime() {
-        var clock = new Date();
+        // if you want seconds, comment out the chunk below and uncomment this block...
+        // var clock = new Date();
+        // document.getElementById("clock").innerHTML = clock.toLocaleTimeString();
+        // window.document.title = clock.toLocaleTimeString();
+        var time = new Date();
+        var stringtime = time.toLocaleTimeString().toString();
+        var ampm = stringtime.substring(
+          stringtime.length - 2,
+          stringtime.length
+        );
+        stringtime = stringtime.substring(0, stringtime.length - 6);
+        stringtime = stringtime + " " + ampm;
+        document.getElementById("clock").innerHTML = stringtime;
         var date = new Date();
-        document.getElementById("clock").innerHTML = clock.toLocaleTimeString();
         document.getElementById("date").innerHTML = date.toDateString();
-        window.document.title = clock.toLocaleTimeString();
+        window.document.title = stringtime;
         return null;
       }
       setInterval(datetime, 1000);
     </script>
+    <!-- <script>
+      $(function () {
+        $("#draggable").draggable();
+      });
+    </script> -->
   </head>
   <body>
+    <!-- <div id="draggable" draggable="true" class="translatecenter"> -->
     <div class="translatecenter">
       <p id="clock" class="clock"></p>
       <p id="date" class="date"></p>
