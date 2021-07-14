@@ -1,0 +1,14 @@
+
+
+$('html, body').animate({scrollTop:0},500);
+
+
+    // $("#topact").click(function () {
+    //   if (($('#topact').hasClass('active'))) {
+    //     alert("clicked item");
+    //     event.preventDefault();
+    //   }
+    // });
+
+
+

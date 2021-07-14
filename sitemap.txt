@@ -1,7 +1,2 @@
 http://www.parsakia.com/
-http://www.parsakia.com/?i=1
 http://www.parsakia.com/index.html
-http://www.parsakia.com/resume.html
-http://www.parsakia.com/photo.html
-http://www.parsakia.com/contact.html
-http://www.parsakia.com/privacy.html

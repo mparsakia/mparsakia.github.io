@@ -1,207 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148367832-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148367832-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-gtag('config', 'UA-148367832-1');
-</script>
-<title>www.parsakia.com</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="./main.css">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Michael Parsakia Website">
-<meta name="author" content="Michael Parsakia">
-<meta name="keywords" content="Homepage,Michael Parsakia,Website,Programming,Developer,Web Design,Software Engineer">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Volkhov:400,700&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+    gtag("config", "UA-148367832-1");
+  </script>
+  <script async src="./baguetteBox.js"></script>
+  <title>www.parsakia.com</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Volkhov:400,700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Volkhov:400,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="./main.css" />
+  <link rel="stylesheet" href="./baguetteBox.css" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Michael Parsakia Website" />
+  <meta name="author" content="Michael Parsakia" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="keywords"
+    content="Homepage,Michael Parsakia,Website,Programming,Developer,Web Design,Software Engineer" />
+  <link rel="favicon" href="./favicon.ico" />
 </head>
-
 <!--
-JavaScript for Photo Gallery (baguetteBox.js) thanks to @feimosi at GitHub!
- * baguetteBox.js
- * @author  feimosi
- * @version 1.11.0
- * @url https://github.com/feimosi/baguetteBox.js
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
--->
+    JS Typewriter: credit to https://github.com/CheeseTurtle
+    JavaScript for Photo Gallery (baguetteBox.js) thanks to @feimosi at GitHub!
+     * baguetteBox.js
+     * @author  feimosi
+     * @version 1.11.0
+     * @url https://github.com/feimosi/baguetteBox.js
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    -->
 
 <body>
-<script>
-function navBarJs() {
-var item = document.getElementById("navbar");
-if (item.className === "topnav") {
-item.className += " responsive";
-} else {
-item.className = "topnav";
-}
-}
-</script>
+  <nav class="navwrap">
+    <div class="topnav" id="navbar">
+      <a href="#" class="active" id="topact">Home</a>
+      <a href="#" id="resumelink">Resume</a>
+      <a href="#" id="contactlink">Contact</a>
+      <a href="#" id="photolink">Photography</a>
+      <a href="https://www.linkedin.com/in/mparsakia/" id="ldlink" target="_blank">LinkedIn</a>
+      <a href="https://github.com/mparsakia" id="ghlink" target="_blank">GitHub</a>
+      <a href="javascript:void(0);" class="icon" id="navmenubtn">
+        <b>≡</b>
+      </a>
+    </div>
+  </nav>
+  <div class="homeimg">
+    <img src="./banner.jpg" alt="code on computer" />
+    <header class="text">
+      <h2>
+        Michael &#129505;
+        <div class="mobilebr"><br /></div>
+        <span class="txt-rotate" data-period="3000"
+          data-rotate='["programming.", "web design.", "photography.", "cybersecurity.", "technology.", "sociology."]'>
+        </span>
+      </h2>
+    </header>
+  </div>
+  <div class="widewrapper">
+    <main class="widemain">
+      <div class="wmaintxt">
+        <h1>Welcome!</h1>
+        <hr />
+        <p>
+          Thanks for visiting my website. I use this website to showcase some of my recent programming projects,
+          photography, and a short web resume. If you'd like to send me a message please use the web form linked
+          "Contact" above.
+        </p>
+        <h2>Example Projects & Programming</h2>
+        <div class="flexcard">
+          <section class="cards">
+            <a href="https://github.com/mparsakia/fullstackopen" target="_blank" class="card hover">
+              <span class="cardheadergreen">FullStackOpen</span>
+              <span class="cardsubheader">Full Stack Web Dev w/ MERN Stack</span>
+              <span class="carddesc">
+                Full stack web application development utilizing MongoDB, ExpressJS, ReactJS, NodeJS. Testing with
+                Jest and end-to-end using Cypress. TypeScript, REST APIs, GraphQL, and React Native included. This is
+                my coursework in University of Helsinki's MOOC FullStackOpen 2020.
+              </span>
+            </a>
+            <a href="https://github.com/mparsakia/pic-ucla" target="_blank" class="card hover">
+              <span class="cardheaderblue">C++ Practice &amp; Notes</span>
+              <span class="cardsubheader">C++</span>
+              <span class="carddesc">
+                Assignments, practice problems, notes, and other C++ related things. This repository is not a single
+                project, it is a collection of programs I have practiced writing in C++, and a partial documentation
+                of my learning progress.
+              </span>
+            </a>
+            <a href="https://github.com/mparsakia/mparsakia.github.io" target="_blank" class="card hover">
+              <span class="cardheaderpurp">www.parsakia.com</span>
+              <span class="cardsubheader">HTML / CSS / JS</span>
+              <span class="carddesc">
+                The purpose of this project was to refresh my knowledge of web development and act as a
+                sort of playground to try new things. The repository contains the live code for this website.
+              </span>
+            </a>
+            <a href="https://github.com/mparsakia/JavaScript-Practice" target="_blank" class="card hover">
+              <span class="cardheaderred">JavaScript Practice</span>
+              <span class="cardsubheader">JS / jQuery / Regex</span>
+              <span class="carddesc">
+                JavaScript practice problems, notes, and assignments; mainly a compilation of smaller works and
+                concepts. Some jQuery too!
+              </span>
+            </a>
+            <a href="https://github.com/mparsakia/oxycleaned-duel-calc" target="_blank" class="card hover">
+              <span class="cardheaderteal">OSRS Duel Simulator</span>
+              <span class="cardsubheader">C++ CLI</span>
+              <span class="carddesc">
+                Inspired by monte-carlo simulations, this is a simulator for duel arena staking outcomes in Oldschool
+                Runescape. The program simulates 1 million duels (gambles), comparing in-game levels, tests which
+                player has PID, and outputs the percentage chance to win the stake.
+              </span>
+            </a>
+            <a href="https://github.com/mparsakia/" target="_blank" class="card hover">
+              <span class="cardheadergreen">GitHub</span>
+              <span class="cardsubheader">Browse my profile...</span>
+              <span class="carddesc">Check out some of the other repositories I have on my github profile too!</span>
+            </a>
+          </section>
+        </div>
+        <br />
+        <hr />
+        <br />
+        <div class="accordion" id="resumeAccordion">
+          <div class="acc-row">
+            <div class="acc-col">
+              <div class="acc-tabs">
+                <div class="acc-tab">
+                  <input type="checkbox" id="resumeCheck" />
+                  <label class="acc-tab-label" for="resumeCheck">Summary Resume</label>
+                  <div class="acc-tab-content">
+                    <div class="wmainres">
+                      <div class="resume-container">
+                        <div class="name">
+                          <h1>Michael Parsakia</h1>
+                        </div>
+                        <div class="profiletext">
+                          <p>
+                            <b><span class="label">SUMMARY</span></b>
+                          </p>
+                          <hr />
+                          <p>
+                            I am a full-stack developer who creates web and mobile applications.
+                            <br> <br>
+                            I have experience with React + Native, NodeJS, MongoDB, GraphQL, Express, JavaScript,
+                            HTML,
+                            CSS, Jest and Cypress for testing, and also C++. I've also taken a number of cybersecurity
+                            and IT courses to compliment my development skills. Additionally, I have experience with
+                            web
+                            design and photography including Adobe tools such as photoshop. The resume below is a
+                            brief
+                            summary of some skills, more detailed information is available on my <a
+                              href="https://www.linkedin.com/in/mparsakia/" id="ldlinktxt" target="_blank">LinkedIn</a>
+                            profile.<br /><br />
+                          </p>
+                        </div>
+                        <div class="contact">
+                          <p>
+                            <b><span class="label">CONTACT</span></b>
+                          </p>
+                          <hr />
+                          <p>
+                            Please use the
+                            <a href="./contact.html" target="_blank">contact form</a> to
+                            send me a message.
+                          </p>
+                          <br />
+                          <p>
+                            <b><span class="label">LOCATION</span></b>
+                          </p>
+                          <hr />
+                          <p>Remote Preferred</p>
+                          <p>Santa Clarita, CA</p>
+                          <p>Los Angeles Area</p>
+                        </div>
+                        <div class="education">
+                          <p>
+                            <b><span class="label">EDUCATION</span></b>
+                          </p>
+                          <hr />
+                          <p>
+                            <b><span class="big">University of California, Los Angeles (UCLA)</span></b>
+                          </p>
+                          <p>&#8212; Bachelor of Arts + Specialization in Computing</p>
+                          <div class="list">
+                            <p>&#8211; Alpha Kappa Delta Honor Society</p>
+                            <p>&#8211; Golden Key Honor Society</p>
+                          </div>
+                          <br />
+                          <p><b>University of Helsinki</b></p>
+                          <div class="list">
+                            <p>&#8211; Full Stack Open Program</p>
+                          </div>
+                          <br />
+                          <p><b>College of the Canyons</b></p>
+                          <div class="list">
+                            <p>&#8211; Honors Program Graduate</p>
+                            <p>&#8211; Vice President of Sociology Club 2014-2015</p>
+                            <br />
+                          </div>
+                        </div>
+                        <div class="certs">
+                          <p>
+                            <b><span class="label">CERTIFICATIONS</span></b>
+                          </p>
+                          <hr />
+                          <p>
+                            <b>FullStackOpen - </b><a
+                              href="https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/11cb9824be322b5ac41923119269b399"
+                              target="_blank">Full Stack Web Application Development</a>
+                          </p>
+                          <div class="list">
+                            <p>&#8211; React JS / React Native</p>
+                            <p>&#8211; MongoDB</p>
+                            <p>&#8211; Express JS</p>
+                            <p>&#8211; Node JS</p>
+                            <p>&#8211; Jest &amp; Cypress testing</p>
+                            <p>&#8211; REST APIs + GraphQL</p>
+                            <p>&#8211; TypeScript</p>
+                            <br />
+                          </div>
+                          <p>
+                            <b>Coursera - </b><a
+                              href="https://www.coursera.org/account/accomplishments/specialization/M4XT46SEU4D6"
+                              target="_blank">Google IT Support Professional</a>
+                          </p>
+                          <div class="list">
+                            <p>&#8211; System Administration &amp; IT Infrastructure</p>
+                            <p>&#8211; Operating Systems &amp; Technical Support</p>
+                            <p>&#8211; Cybersecurity - IT Security</p>
+                            <p>&#8211; Computer Networking</p>
+                            <p>
+                              &#8211;
+                              <a href="https://www.coursera.org/account/accomplishments/records/XP7T92FEG3W2"
+                                target="_blank">Crash Course on Python</a>
+                            </p>
+                            <br />
+                          </div>
+                          <p>
+                            <b>Google Digital Garage - </b><a href="digital-marketing-google-michael-parsakia.pdf"
+                              target="_blank">
+                              Digital Marketing</a>
+                          </p>
+                          <br />
+                          <p><b>SoloLearn</b></p>
+                          <div class="list">
+                            <p>
+                              &#8211;
+                              <a href="https://www.sololearn.com/Certificate/1051-7163991/pdf/" target="_blank">C++
+                                Tutorial Course</a>
+                            </p>
+                            <p>
+                              &#8211;
+                              <a href="https://www.sololearn.com/Certificate/1024-7163991/pdf/"
+                                target="_blank">Javascript Tutorial Course</a>
+                            </p>
+                            <p>
+                              &#8211;
+                              <a href="https://www.sololearn.com/Certificate/1014-7163991/pdf/" target="_blank">HTML
+                                Fundamentals Course</a>
+                            </p>
+                            <p>
+                              &#8211;
+                              <a href="https://www.sololearn.com/Certificate/1023-7163991/pdf/" target="_blank">CSS
+                                Fundamentals Course</a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="languages">
+                          <p>
+                            <b><span class="label">LANGUAGES</span></b>
+                          </p>
+                          <hr />
+                          <p><b>Web Development / Design </b></p>
+                          <div class="list">
+                            <p>&#8211; 2 Years Experience</p>
+                            <p>&#8211; MERN Full-Stack / HTML / CSS / JavaScript</p>
+                            <p>&#8211; MongoDB, Express, React, NodeJS</p>
+                            <p>&#8211; Testing: Jest / Cypress e2e</p>
+                            <p>&#8211; TypeScript</p>
+                            <p>&#8211; REST APIs + GraphQL</p>
+                            <p>&#8211; Responsive CSS Design</p>
+                          </div>
+                          <br />
+                          <p><b>C++</b></p>
+                          <div class="list">
+                            <p>&#8211; 1 Year Experience</p>
+                            <p>&#8211; Object Oriented Programming</p>
+                            <p>&#8211; Data Structures</p>
+                            <p>&#8211; Memory Management / RAII</p>
+                            <p>&#8211; STL Usage</p>
+                          </div>
+                        </div>
+                        <div class="technologies">
+                          <p>
+                            <b><span class="label">TECHNOLOGIES</span></b>
+                          </p>
+                          <hr />
+                          <p>Microsoft Office</p>
+                          <p>Google Docs / G-Suite</p>
+                          <p>Linux Terminal, Ubuntu, Kali</p>
+                          <p>Windows OS, Macintosh OS</p>
+                          <p>Stata, Minitab</p>
+                          <p>Git &amp; GitHub</p>
+                          <p>Visual Studio C++</p>
+                          <p>Visual Studio Code</p>
+                        </div>
+                        <div class="softskills">
+                          <p>
+                            <b><span class="label">SOFT SKILLS</span></b>
+                          </p>
+                          <hr />
+                          <p>Self-Motivated &amp; Resourceful</p>
+                          <p>Strong Communication Skills</p>
+                          <p>Time Management</p>
+                          <p>Leadership &amp; Teamwork</p>
+                          <p>Flexible &amp; Adaptable</p>
+                        </div>
+                        <div class="otherstuff">
+                          <p>
+                            <b><span class="label">OTHER SKILLS</span></b>
+                          </p>
+                          <hr />
+                          <p>Computer Repair / Assembly</p>
+                          <p>Qualitative &amp; Quantitative Research</p>
+                          <p>DSLR Photography</p>
+                          <p>Adobe Photoshop &amp; Lightroom</p>
+                          <p>Academic Writing &amp; Higher Education</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="accordion" id="contactAccordion">
+          <div class="acc-row">
+            <div class="acc-col">
+              <div class="acc-tabs">
+                <div class="acc-tab">
+                  <input type="checkbox" id="contactCheck" />
+                  <label class="acc-tab-label" for="contactCheck">Contact Me</label>
+                  <div class="acc-tab-content">
+                    <p class="center">
+                      Note: If you are a recruiter message me on
+                      <a href="https://www.linkedin.com/in/mparsakia/" id="ldlinktxt" target="_blank">LinkedIn</a>
+                      directly.<br /><br />
+                    </p>
+                    <div class="contactcontain">
+                      <iframe class="contactiframe"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfEKta-jkHPP92dw_yt3gd_xSkmZa-Ssp8Aq_VUMszE2ep_SA/viewform?embedded=true"
+                        frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<script>
-// Typewriter: credit to https://github.com/CheeseTurtle 
-  var TxtRotate = function(el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
+        <br />
+        <br />
 
-TxtRotate.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+        <div class="accordion" id="photosAccordion">
+          <div class="acc-row">
+            <div class="acc-col">
+              <div class="acc-tabs">
+                <div class="acc-tab">
+                  <input type="checkbox" id="photosCheck" />
+                  <label class="acc-tab-label" for="photosCheck">Photography</label>
+                  <div class="acc-tab-content">
+                    <div class="gallery">
+                      <span>
+                        Some of my best photographs, in no particular order.
+                        <br />
+                        Note: Clicking a thumbnail will open the full-size image, and may
+                        take a while on slow connections!
+                        <br />
+                        <br />
+                      </span>
+                      <a href="./img001.jpg"> <img src="./thumb001.jpg" loading="lazy" /></a>
+                      <a href="./portlandhr.jpg"> <img src="./portland.jpg" loading="lazy" /></a>
+                      <a href="./img20.jpg"> <img src="./thumb20.jpg" loading="lazy" /></a>
+                      <a href="./img2.jpg"> <img src="./thumb2.jpg" loading="lazy" /></a>
+                      <a href="./img3.jpg"> <img src="./thumb3.jpg" loading="lazy" /></a>
+                      <a href="./img6.jpg"> <img src="./thumb6.jpg" loading="lazy" /></a>
+                      <a href="./img7.jpg"> <img src="./thumb7.jpg" loading="lazy" /></a>
+                      <a href="./img8.jpg"> <img src="./thumb8.jpg" loading="lazy" /></a>
+                      <a href="./img9.jpg"> <img src="./thumb9.jpg" loading="lazy" /></a>
+                      <a href="./img10.jpg"> <img src="./thumb10.jpg" loading="lazy" /></a>
+                      <a href="./img11.jpg"> <img src="./thumb11.jpg" loading="lazy" /></a>
+                      <a href="./img12.jpg"> <img src="./thumb12.jpg" loading="lazy" /></a>
+                      <a href="./img13.jpg"> <img src="./thumb13.jpg" loading="lazy" /></a>
+                      <a href="./img14.jpg"> <img src="./thumb14.jpg" loading="lazy" /></a>
+                      <a href="./img5.jpg"> <img src="./thumb5.jpg" loading="lazy" /></a>
+                      <a href="./img15.jpg" data-caption="Looks like a sloth!">
+                        <img src="./thumb15.jpg" loading="lazy" /></a>
+                      <a href="./img16.jpg"> <img src="./thumb16.jpg" loading="lazy" /></a>
+                      <a href="./img17.jpg"> <img src="./thumb17.jpg" loading="lazy" /></a>
+                      <a href="./img4.jpg"> <img src="./thumb4.jpg" loading="lazy" /></a>
+                      <a href="./img18.jpg"> <img src="./thumb18.jpg" loading="lazy" /></a>
+                      <a href="./img19.jpg"> <img src="./thumb19.jpg" loading="lazy" /></a>
+                      <a href="./img1.jpg"> <img src="./thumb1.jpg" loading="lazy" /></a>
+                      <a href="./img21.jpg"> <img src="./thumb21.jpg" loading="lazy" /></a>
+                      <a href="./img22.jpg"> <img src="./thumb22.jpg" loading="lazy" /></a>
+                      <a href="./img23.jpg"> <img src="./thumb23.jpg" loading="lazy" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
+      </div>
+  </div>
+  </main>
+  </div>
+  <footer class="endcopyrt">
+    <p id="footer-copy">
+      <!-- JavaScript will fill in the footer here -->
+    </p>
+  </footer>
 
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  <script>
+    var TxtRotate = function (el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = "";
+      this.tick();
+      this.isDeleting = false;
+    };
+    TxtRotate.prototype.tick = function () {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+      this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+      var that = this;
+      var delta = 250 - Math.random() * 100;
+      if (this.isDeleting) {
+        delta /= 2;
+      }
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === "") {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+      }
+      setTimeout(function () {
+        that.tick();
+      }, delta);
+    };
 
-  var that = this;
-  var delta = 250 - Math.random() * 100;
+    window.onload = function () {
+      var elements = document.getElementsByClassName("txt-rotate");
+      for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute("data-rotate");
+        var period = elements[i].getAttribute("data-period");
+        if (toRotate) {
+          new TxtRotate(elements[i], JSON.parse(toRotate), period);
+        }
+      }
+    };
+  </script>
+  <script>
+    // jQuery for scrolling to elements & expanding them
+    // also reworked navbar to jQuery & smoother closing after click
+    $("#navmenubtn").click(function () {
+      // need to check the CSS media query breakpoint of 800px
+      if (window.innerWidth <= 800) {
+        if (!($("#navbar").hasClass("responsive"))) {
+          $("#navbar").addClass('responsive');
+        } else {
+          $("#navbar").removeClass("responsive");
+        }
+      }
+    });
 
-  if (this.isDeleting) { delta /= 2; }
+    $("#topact").click(function () {
+      $('html, body').animate({ scrollTop: 0 }, 750).change();
+      // If were on mobile & click the link, close the nav menu
+      if (window.innerWidth <= 800) {
+        if ($("#navbar").hasClass("responsive")) {
+          $("#navbar").removeClass("responsive");
+        }
+      }
+    });
 
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
+    $("#contactlink").click(function () {
+      $("#contactCheck").prop("checked", true).change();
+      if (window.innerWidth <= 800) {
+        $([document.documentElement, document.body]).animate({
+          scrollTop: ($("#contactAccordion").position().top - 375)
+        }, 750);
+        if ($("#navbar").hasClass("responsive")) {
+          $("#navbar").removeClass("responsive");
+        }
+      } else {
+        $([document.documentElement, document.body]).animate({
+          scrollTop: ($("#contactAccordion").position().top - 75)
+        }, 750);
+      }
+    });
 
-  setTimeout(function() {
-    that.tick();
-  }, delta);
-};
+    $("#resumelink").click(function () {
+      $("#resumeCheck").prop("checked", true).change();
+      if (window.innerWidth <= 800) {
+        $([document.documentElement, document.body]).animate({
+          scrollTop: ($("#resumeAccordion").position().top - 375)
+        }, 750);
+        if ($("#navbar").hasClass("responsive")) {
+          $("#navbar").removeClass("responsive");
+        }
+      } else {
+        $([document.documentElement, document.body]).animate({
+          scrollTop: ($("#resumeAccordion").position().top - 75)
+        }, 750);
+      }
+    });
 
-window.onload = function() {
-  var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-rotate');
-    var period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-};
-</script>
-<nav class="navwrap">
-<div class="topnav" id="navbar">
-<a href="/" class="active" id="topact">Home</a>
-<a href="./resume.html">Resume</a>
-<a href="./contact.html">Contact</a>
-<a href="./photo.html">Photography</a>
-<a href="https://www.linkedin.com/in/mparsakia/" id="ldlink" target="_blank">LinkedIn</a>
-<a href="https://github.com/mparsakia" id="ghlink" target="_blank">GitHub</a>
-<a href="javascript:void(0);" class="icon" onclick="navBarJs()"><b>≡</b></a>
-</div>
-</nav>
-<header class="wideheader">
-<h1>Homepage</h1>
-</header>
-<div class="homeimg">
-<img src="./banner.jpg" alt="code on computer screen">
-<div class="text">
-<h2>Michael Parsakia&#129505;'s<div class="mobilebr"><br></div>&nbsp;<span class="txt-rotate" data-period="3000" data-rotate='["programming.", "sociology.", "photography.", "cybersecurity.", "web design.", "technology."]'></span></h2>
-</div>
-</div>
-<div class="widewrapper">
-<main class="widemain">
-<div class="wmaintxt">
-<h1>Welcome!</h1>
-<hr>
-<p>Thanks for visiting my website. I use this website to showcase some of my recent programming projects, photography, and a short web resume. If you'd like to send me a message please use the web form linked "Contact" above.</p>
-<h2>My Projects / Programming Practice</h2>            
-<div class="flexcard">
-<section class="cards">
-<a href="https://github.com/mparsakia/fullstackopen" target="_blank" class="card hover">
-<span class="cardheadergreen">FullStackOpen</span>
-<span class="cardsubheader">Full Stack Web Dev w/ MERN Stack</span>
-<span class="carddesc">Full stack web application development utilizing MongoDB, ExpressJS, ReactJS, NodeJS. Testing with Jest and end-to-end using Cypress. TypeScript, REST APIs, GraphQL, and React Native included. This is my coursework in University of Helsinki's MOOC FullStackOpen 2020.</span>   
-</a> 
-<a href="https://github.com/mparsakia/pic-ucla" target="_blank" class="card hover">
-<span class="cardheaderblue">C++ Practice &amp; Notes</span>
-<span class="cardsubheader">C++</span>
-<span class="carddesc">Assignments, practice problems, notes, and other C++ related things. This repository is not a single project, it is a collection of programs I have practiced writing in C++, and a partial documentation of my learning progress.</span>   
-</a>
-<a href="https://github.com/mparsakia/mparsakia.github.io" target="_blank" class="card hover">
-<span class="cardheaderpurp">www.parsakia.com</span>
-<span class="cardsubheader">HTML / CSS / JS</span>
-<span class="carddesc">The website you're on now! The purpose of this project was to refresh my knowledge of web development; while learning by creating something I care about. This repo contains a copy the code for the website.</span>   
-</a>
-<a href="https://github.com/mparsakia/JavaScript-Practice" target="_blank" class="card hover">
-<span class="cardheaderred">JavaScript Practice</span>
-<span class="cardsubheader">JS / jQuery / Regex</span>
-<span class="carddesc">JavaScript practice problems, notes, and assignments; mainly a compilation of smaller works and concepts. Some jQuery too!</span>   
-</a>
-<a href="https://github.com/mparsakia/oxycleaned-duel-calc" target="_blank" class="card hover">
-<span class="cardheaderteal">OSRS Duel Simulator</span>
-<span class="cardsubheader">C++ CLI</span>
-<span class="carddesc">Inspired by monte-carlo simulations, this is a simulator for duel arena staking outcomes in Oldschool Runescape. The program simulates 1 million duels (gambles), comparing in-game levels, tests which player has PID, and outputs the percentage chance to win the stake.</span>   
-</a> 
-<a href="https://github.com/mparsakia/" target="_blank" class="card hover">
-<span class="cardheadergreen">GitHub</span>
-<span class="cardsubheader">Browse my profile...</span>
-<span class="carddesc">Check out some of the other repositories I have on my github profile too!</span>   
-</a>      
-</section>
-</div>
-</div>
-</main>
-</div>    
-<footer class="copyrt">
-<div class="copywrap">
-<div class="footgrid">
-<div class="footleft">
-<div class="footmap">
-<span class="footspan">Sitemap</span>
-<a href="/">Home</a>
-<a href="./resume.html">Resume</a>
-<a href="./contact.html">Contact</a>
-<a href="./photo.html">Photography</a>
-</div>
-</div>
-<div class="footmid">
-<span class="footspan">Hello!</span>
-<p>Thanks for visiting! &#128516; </p>
-</div>
-<div class="footrt">
-<span class="footspan">Information &amp; Disclaimers</span>
-<p>Et tu, Brute?<br>Yes, this website uses cookies. I use Google Analytics to monitor traffic to the site, see how well the website layout is working, and identify problems with the website. If you'd like to read a very generic privacy policy and cookies disclaimer, <a href="./privacy.html">click here.</a></p>
-</div>
-</div>
-</div>
-</footer>
-<div class="endcopyrt"><p>Designed with &#129505; by Michael Parsakia © 2019</p></div>
+    $("#photolink").click(function () {
+      $("#photosCheck").prop("checked", true).change();
+      if (window.innerWidth <= 800) {
+        $([document.documentElement, document.body]).animate({
+          scrollTop: ($("#photosAccordion").position().top - 375)
+        }, 750);
+        if ($("#navbar").hasClass("responsive")) {
+          $("#navbar").removeClass("responsive");
+        }
+      } else {
+        $([document.documentElement, document.body]).animate({
+          scrollTop: ($("#photosAccordion").position().top - 75)
+        }, 750);
+      }
+    });
+
+
+
+  </script>
+
+
+  <script>
+    window.onload = function () {
+      baguetteBox.run('.gallery', {
+        overlayBackgroundColor: 'rgba(0,0,0,0.9)',
+      });
+    };
+  </script>
+
+
+  <script>
+    var dateCopyright = document.getElementById("footer-copy");
+    dateCopyright.innerHTML = `Michael Parsakia © ${new Date().getFullYear()} <br/> <a href="./privacy.html">Privacy Policy & Cookies Disclaimer</a>`;
+  </script>
 </body>
+
 </html>
