@@ -656,10 +656,10 @@ a {
 }
 
 /* Typewriter cursor and animations */
-.txt-rotate > .wrap {
+.txt-rotate > .wrapcursor {
   border-right: 5px solid rgba(0, 0, 0, 0);
 }
-.txt-rotate > .wrap {
+.txt-rotate > .wrapcursor {
   animation: animated-cursor 750ms steps(50, end) infinite;
 }
 @keyframes animated-cursor {
