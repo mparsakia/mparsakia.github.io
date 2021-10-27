@@ -97,10 +97,10 @@ a {
 
 .widemain hr {
   border: none;
-  height: 4px;
+  height: 3px;
   color: #ffb550;
   background-color: #ffb550;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .wmaintxt {
@@ -365,6 +365,12 @@ a {
   margin: 0 auto;
 }
 
+.resumesmallgreytext {
+  font-size: 0.8em !important;
+  line-height: 2 !important;
+  color: #444444;
+}
+
 .resume-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -377,9 +383,11 @@ a {
 }
 
 .resume-container hr {
-  height: 4px;
+  height: 3px;
   border-radius: 4px;
   margin: 5px 0;
+  color: #bdbdbd;
+  background-color: #bdbdbd;
 }
 
 .resume-container a,
