@@ -99,7 +99,7 @@ a {
   border: none;
   height: 3px;
   color: lab(79, 18, 60);
-  background-color: lab(79, 18, 60);
+  background-color: lab(99, -1, -2);
   border-radius: 4px;
 }
 
