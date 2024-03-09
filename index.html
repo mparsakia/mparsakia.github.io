@@ -3,6 +3,24 @@
 
 <head>
   <title>www.parsakia.com</title>
+     <script src="https://unpkg.com/highlight.run" fetchpriority="high"></script>
+    <script>
+        H.init('kevqkq5g', {
+            environment: 'production',
+            version: 'web:v1',
+            networkRecording: {
+              enabled: true,
+              recordHeadersAndBody: true,
+              urlBlocklist: [],
+            },
+            enableCanvasRecording: true,        
+            samplingStrategy: {
+              canvas: 5,                       
+              canvasMaxSnapshotDimension: 480,
+            },
+            recordCrossOriginIframe: true,
+        });
+    </script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
