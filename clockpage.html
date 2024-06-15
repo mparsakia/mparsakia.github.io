@@ -1,112 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script src="https://unpkg.com/highlight.run" fetchpriority="high"></script>
+    <script>
+      H.init("kevqkq5g", {
+        environment: "production",
+        version: "web:v1",
+        networkRecording: {
+          enabled: true,
+          recordHeadersAndBody: true,
+          urlBlocklist: [],
+        },
+        enableCanvasRecording: true,
+        samplingStrategy: {
+          canvas: 5,
+          canvasMaxSnapshotDimension: 480,
+        },
+        recordCrossOriginIframe: true,
+      });
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      gtag("config", "UA-148367832-1");
+    </script>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="Dark Mode Clock Page" />
+    <meta name="author" content="Michael Parsakia" />
+    <meta name="keywords" content="Night Dark Black Mode Clock Date Dark Mode" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="google-site-verification"
+      content="_gGzbMQL_miA33c2rri3giekfotUqH6WNgM2hxOtlnA"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        background-color: #000;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+      }
 
-    gtag('config', 'UA-148367832-1');
-  </script>
-  <meta charset="utf-8" />
-  <title></title>
-  <meta name="description" content="Dark Mode Clock Page" />
-  <meta name="author" content="Michael Parsakia" />
-  <meta name="keywords" content="Night Dark Black Mode Clock Date Dark Mode" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="google-site-verification" content="_gGzbMQL_miA33c2rri3giekfotUqH6WNgM2hxOtlnA" />
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
-  <style>
-    html {
-      background-color: #000;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        text-rendering: optimizeLegibility;
+        font-kerning: normal;
+      }
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #000;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
+      .clock {
+        color: #222222;
+        font-size: 110px;
+        font-family: "Courier Prime", monospace;
+        text-align: left;
+        word-spacing: -35px;
+        line-height: 0.65;
+        margin-bottom: 0px;
+      }
 
-    .clock {
-      color: #222222;
-      font-size: 110px;
-      font-family: 'Courier Prime', monospace;
-      text-align: left;
-      word-spacing: -35px;
-      line-height: 0.65;
-      margin-bottom: 0px;
-    }
+      .date {
+        color: #202020;
+        font-size: 34px;
+        word-spacing: -3px;
+        font-family: "Courier Prime", monospace;
+        text-align: right;
+        line-height: 0.7;
+        margin-top: 0px;
+      }
 
-    .date {
-      color: #202020;
-      font-size: 34px;
-      word-spacing: -3px;
-      font-family: 'Courier Prime', monospace;
-      text-align: right;
-      line-height: 0.7;
-      margin-top: 0px;
-    }
+      .translatecenter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+      }
 
-    .translatecenter {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -60%);
-    }
-
-    /* [draggable="true"] {
+      /* [draggable="true"] {
         cursor: move;
       } */
-  </style>
-  <script>
-    function datetime() {
-      // if you want seconds, comment out the chunk below and uncomment this block...
-      // var clock = new Date();
-      // document.getElementById("clock").innerHTML = clock.toLocaleTimeString();
-      // window.document.title = clock.toLocaleTimeString();
-      var time = new Date();
-      var stringtime = time.toLocaleTimeString().toString();
-      var ampm = stringtime.substring(
-        stringtime.length - 2,
-        stringtime.length
-      );
-      stringtime = stringtime.substring(0, stringtime.length - 6);
-      stringtime = stringtime + ' ' + ampm;
-      document.getElementById('clock').innerHTML = stringtime;
-      var date = new Date();
-      document.getElementById('date').innerHTML = date.toDateString();
-      window.document.title = stringtime;
-      return null;
-    }
-    setInterval(datetime, 1000);
-  </script>
-  <!-- <script>
+    </style>
+    <script>
+      function datetime() {
+        // if you want seconds, comment out the chunk below and uncomment this block...
+        // var clock = new Date();
+        // document.getElementById("clock").innerHTML = clock.toLocaleTimeString();
+        // window.document.title = clock.toLocaleTimeString();
+        var time = new Date();
+        var stringtime = time.toLocaleTimeString().toString();
+        var ampm = stringtime.substring(stringtime.length - 2, stringtime.length);
+        stringtime = stringtime.substring(0, stringtime.length - 6);
+        stringtime = stringtime + " " + ampm;
+        document.getElementById("clock").innerHTML = stringtime;
+        var date = new Date();
+        document.getElementById("date").innerHTML = date.toDateString();
+        window.document.title = stringtime;
+        return null;
+      }
+      setInterval(datetime, 1000);
+    </script>
+    <!-- <script>
       $(function () {
         $("#draggable").draggable();
       });
     </script> -->
-</head>
+  </head>
 
-<body>
-  <!-- <div id="draggable" draggable="true" class="translatecenter"> -->
-  <div class="translatecenter">
-    <p id="clock" class="clock"></p>
-    <p id="date" class="date"></p>
-  </div>
-</body>
-
+  <body>
+    <!-- <div id="draggable" draggable="true" class="translatecenter"> -->
+    <div class="translatecenter">
+      <p id="clock" class="clock"></p>
+      <p id="date" class="date"></p>
+    </div>
+  </body>
 </html>

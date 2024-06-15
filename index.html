@@ -1,268 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>www.parsakia.com</title>
-     <script src="https://unpkg.com/highlight.run" fetchpriority="high"></script>
+  <head>
+    <title>www.parsakia.com</title>
+    <script src="https://unpkg.com/highlight.run" fetchpriority="high"></script>
     <script>
-        H.init('kevqkq5g', {
-            environment: 'production',
-            version: 'web:v1',
-            networkRecording: {
-              enabled: true,
-              recordHeadersAndBody: true,
-              urlBlocklist: [],
-            },
-            enableCanvasRecording: true,        
-            samplingStrategy: {
-              canvas: 5,                       
-              canvasMaxSnapshotDimension: 480,
-            },
-            recordCrossOriginIframe: true,
-        });
+      H.init("kevqkq5g", {
+        environment: "production",
+        version: "web:v1",
+        networkRecording: {
+          enabled: true,
+          recordHeadersAndBody: true,
+          urlBlocklist: [],
+        },
+        enableCanvasRecording: true,
+        samplingStrategy: {
+          canvas: 5,
+          canvasMaxSnapshotDimension: 480,
+        },
+        recordCrossOriginIframe: true,
+      });
     </script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148367832-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-148367832-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "UA-148367832-1");
-  </script>
-  <script async src="./baguetteBox.js"></script>
-  <link rel="stylesheet" href="./baguetteBox.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Volkhov:400,700&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Volkhov:400,700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="./main.css" />
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="Michael Parsakia Website" />
-  <meta name="author" content="Michael Parsakia" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="keywords"
-    content="Homepage,Michael Parsakia,Website,Programming,Developer,Web Design,Software Engineer" />
-  <link rel="favicon" href="./favicon.ico" />
-  <meta name="google-site-verification" content="_gGzbMQL_miA33c2rri3giekfotUqH6WNgM2hxOtlnA" />
-</head>
+      gtag("config", "UA-148367832-1");
+    </script>
+    <script async src="./baguetteBox.js"></script>
+    <link rel="stylesheet" href="./baguetteBox.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Volkhov:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Volkhov:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Michael Parsakia Website" />
+    <meta name="author" content="Michael Parsakia" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="keywords"
+      content="Homepage,Michael Parsakia,Website,Programming,Developer,Web Design,Software Engineer"
+    />
+    <link rel="favicon" href="./favicon.ico" />
+    <meta
+      name="google-site-verification"
+      content="_gGzbMQL_miA33c2rri3giekfotUqH6WNgM2hxOtlnA"
+    />
+  </head>
 
-<body>
-  <nav class="navwrap">
-    <div class="topnav" id="navbar">
-      <a href="#" class="active" id="topact">Home</a>
-      <a href="#" id="resumelink">Resume</a>
-      <a href="#" id="contactlink">Contact</a>
-      <a href="#" id="photolink">Photography</a>
-      <a href="https://www.linkedin.com/in/mparsakia/" id="ldlink" target="_blank">LinkedIn</a>
-      <a href="https://github.com/mparsakia" id="ghlink" target="_blank">GitHub</a>
-      <a href="javascript:void(0);" class="icon" id="navmenubtn">
-        <b>≡</b>
-      </a>
-    </div>
-  </nav>
-
-  <div class="homeimg">
-    <img src="./banner.jpg" alt="code on computer" />
-    <header class="text">
-      <div data-nosnippet>
-        <h2 id="headertextID">
-          Michael &#129505;
-          <div class="mobilebr"><br /></div>
-          <span class="txt-rotate" data-period="3000"
-            data-rotate='["web development.", "programming.", "photography.", "JavaScript.", "React JS."]'>
-          </span>
-        </h2>
+  <body>
+    <nav class="navwrap">
+      <div class="topnav" id="navbar">
+        <a href="#" class="active" id="topact">Home</a>
+        <a href="#" id="resumelink">Resume</a>
+        <a href="#" id="contactlink">Contact</a>
+        <a href="#" id="photolink">Photography</a>
+        <a href="https://www.linkedin.com/in/mparsakia/" id="ldlink" target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/mparsakia" id="ghlink" target="_blank">GitHub</a>
+        <a href="javascript:void(0);" class="icon" id="navmenubtn">
+          <b>≡</b>
+        </a>
       </div>
-    </header>
-  </div>
-  <div class="widewrapper">
-    <main class="widemain">
-      <div class="wmaintxt">
-        <h1>Welcome!</h1>
-        <hr />
-        <p>
-          Thanks for visiting my website. I use this website to showcase some of my recent programming projects,
-          photography, and short resume is available to view. If you'd like to send me a message please use the
-          web form linked
-          "Contact" above.
-        </p>
-        <h2>Example Projects & Programming</h2>
-        <div class="flexcard">
-          <section class="cards">
-            <a href="https://github.com/mparsakia/fullstackopen" target="_blank" class="card hover">
-              <span class="cardheadergreen">FullStackOpen</span>
-              <span class="cardsubheader">Full Stack Web Dev w/ MERN Stack</span>
-              <span class="carddesc">
-                Full stack web application development utilizing MongoDB, ExpressJS, ReactJS, NodeJS. Testing with Jest
-                and end-to-end using Cypress. TypeScript, REST APIs, GraphQL, and React Native included. This is my
-                coursework in
-                University of Helsinki's MOOC FullStackOpen 2020.
-              </span>
-            </a>
-            <a href="https://github.com/mparsakia/pic-ucla" target="_blank" class="card hover">
-              <span class="cardheaderblue">C++ Practice &amp; Notes</span>
-              <span class="cardsubheader">C++</span>
-              <span class="carddesc">
-                Assignments, practice problems, notes, and other C++ related things. This repository is not a single
-                project, it is a collection of programs I have practiced writing in C++, and a partial documentation of
-                my learning
-                progress.
-              </span>
-            </a>
-            <a href="https://github.com/mparsakia/mparsakia.github.io" target="_blank" class="card hover">
-              <span class="cardheaderpurp">www.parsakia.com</span>
-              <span class="cardsubheader">HTML / CSS / JS</span>
-              <span class="carddesc">
-                The purpose of this project was to refresh my knowledge of web development and act as a sort of
-                playground to try new things. The repository contains the live code for this website.
-              </span>
-            </a>
-            <a href="https://github.com/mparsakia/JavaScript-Practice" target="_blank" class="card hover">
-              <span class="cardheaderred">JavaScript Practice</span>
-              <span class="cardsubheader">JS / jQuery / Regex</span>
-              <span class="carddesc">
-                JavaScript practice problems, notes, and assignments; mainly a compilation of smaller works and
-                concepts. Some jQuery too!
-              </span>
-            </a>
-            <a href="https://github.com/mparsakia/oxycleaned-duel-calc" target="_blank" class="card hover">
-              <span class="cardheaderteal">OSRS Duel Simulator</span>
-              <span class="cardsubheader">C++ CLI</span>
-              <span class="carddesc">
-                Inspired by monte-carlo simulations, this is a simulator for duel arena staking outcomes in Oldschool
-                Runescape. The program simulates 1 million duels (gambles), comparing in-game levels, tests which player
-                has PID, and
-                outputs the percentage chance to win the stake.
-              </span>
-            </a>
-            <a href="https://github.com/mparsakia/" target="_blank" class="card hover">
-              <span class="cardheadergreen">GitHub</span>
-              <span class="cardsubheader">Browse my profile...</span>
-              <span class="carddesc">Check out some of the other repositories I have on my github profile too!</span>
-            </a>
-          </section>
+    </nav>
+
+    <div class="homeimg">
+      <img src="./banner.jpg" alt="code on computer" />
+      <header class="text">
+        <div data-nosnippet>
+          <h2 id="headertextID">
+            Michael &#129505;
+            <div class="mobilebr"><br /></div>
+            <span
+              class="txt-rotate"
+              data-period="3000"
+              data-rotate='["web development.", "programming.", "photography.", "JavaScript.", "React JS."]'
+            >
+            </span>
+          </h2>
         </div>
-        <br />
-        <hr />
-        <br />
-        <div class="accordion" id="resumeAccordion">
-          <div class="acc-row">
-            <div class="acc-col">
-              <div class="acc-tabs">
-                <div class="acc-tab">
-                  <input type="checkbox" id="resumeCheck" checked/>
-                  <label class="acc-tab-label" for="resumeCheck">Summary Resume</label>
-                  <div class="acc-tab-content">
-                    <div class="wmainres">
-                      <!-- <p align="center">Please contact me or check my <a href="https://www.linkedin.com/in/mparsakia/"
+      </header>
+    </div>
+    <div class="widewrapper">
+      <main class="widemain">
+        <div class="wmaintxt">
+          <h1>Welcome!</h1>
+          <hr />
+          <p>
+            Thanks for visiting my website. I use this website to showcase some of my
+            recent programming projects, photography, and short resume is available to
+            view. If you'd like to send me a message please use the web form linked
+            "Contact" above.
+          </p>
+          <h2>Example Projects & Programming</h2>
+          <div class="flexcard">
+            <section class="cards">
+              <a
+                href="https://github.com/mparsakia/fullstackopen"
+                target="_blank"
+                class="card hover"
+              >
+                <span class="cardheadergreen">FullStackOpen</span>
+                <span class="cardsubheader">Full Stack Web Dev w/ MERN Stack</span>
+                <span class="carddesc">
+                  Full stack web application development utilizing MongoDB, ExpressJS,
+                  ReactJS, NodeJS. Testing with Jest and end-to-end using Cypress.
+                  TypeScript, REST APIs, GraphQL, and React Native included. This is my
+                  coursework in University of Helsinki's MOOC FullStackOpen 2020.
+                </span>
+              </a>
+              <a
+                href="https://github.com/mparsakia/pic-ucla"
+                target="_blank"
+                class="card hover"
+              >
+                <span class="cardheaderblue">C++ Practice &amp; Notes</span>
+                <span class="cardsubheader">C++</span>
+                <span class="carddesc">
+                  Assignments, practice problems, notes, and other C++ related things.
+                  This repository is not a single project, it is a collection of programs
+                  I have practiced writing in C++, and a partial documentation of my
+                  learning progress.
+                </span>
+              </a>
+              <a
+                href="https://github.com/mparsakia/mparsakia.github.io"
+                target="_blank"
+                class="card hover"
+              >
+                <span class="cardheaderpurp">www.parsakia.com</span>
+                <span class="cardsubheader">HTML / CSS / JS</span>
+                <span class="carddesc">
+                  The purpose of this project was to refresh my knowledge of web
+                  development and act as a sort of playground to try new things. The
+                  repository contains the live code for this website.
+                </span>
+              </a>
+              <a
+                href="https://github.com/mparsakia/JavaScript-Practice"
+                target="_blank"
+                class="card hover"
+              >
+                <span class="cardheaderred">JavaScript Practice</span>
+                <span class="cardsubheader">JS / jQuery / Regex</span>
+                <span class="carddesc">
+                  JavaScript practice problems, notes, and assignments; mainly a
+                  compilation of smaller works and concepts. Some jQuery too!
+                </span>
+              </a>
+              <a
+                href="https://github.com/mparsakia/oxycleaned-duel-calc"
+                target="_blank"
+                class="card hover"
+              >
+                <span class="cardheaderteal">OSRS Duel Simulator</span>
+                <span class="cardsubheader">C++ CLI</span>
+                <span class="carddesc">
+                  Inspired by monte-carlo simulations, this is a simulator for duel arena
+                  staking outcomes in Oldschool Runescape. The program simulates 1 million
+                  duels (gambles), comparing in-game levels, tests which player has PID,
+                  and outputs the percentage chance to win the stake.
+                </span>
+              </a>
+              <a href="https://github.com/mparsakia/" target="_blank" class="card hover">
+                <span class="cardheadergreen">GitHub</span>
+                <span class="cardsubheader">Browse my profile...</span>
+                <span class="carddesc"
+                  >Check out some of the other repositories I have on my github profile
+                  too!</span
+                >
+              </a>
+            </section>
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div class="accordion" id="resumeAccordion">
+            <div class="acc-row">
+              <div class="acc-col">
+                <div class="acc-tabs">
+                  <div class="acc-tab">
+                    <input type="checkbox" id="resumeCheck" checked />
+                    <label class="acc-tab-label" for="resumeCheck">Summary Resume</label>
+                    <div class="acc-tab-content">
+                      <div class="wmainres">
+                        <!-- <p align="center">Please contact me or check my <a href="https://www.linkedin.com/in/mparsakia/"
                           id="ldlinktxt" target="_blank">LinkedIn</a> profile for a copy of my resume at this time.</p> -->
-                      <div class="resume-container">
-                        <div class="name">
-                          <h1>Michael Parsakia</h1>
-                        </div>
-                        <div class="profiletext">
-                          <p>
-                            <b><span class="label">Summary</span></b>
-                          </p>
-                          <hr />
-                          <p>
-                            Full stack developer experienced in web and mobile software development.
-                            <br />
-                            <br />
-                            <i>The information below is a brief summary of skills</i>. <br />
-                            <br />
-                            Detailed information such as work experience is available on my <a
-                              href="https://www.linkedin.com/in/mparsakia/" id="ldlinktxt" target="_blank">LinkedIn</a>
-                            profile.<br />
-                            You may also request a copy of my full resume via the contact form.<br />
-                            <br />
-                          </p>
-                        </div>
-                        <div class="contact">
-                          <p>
-                            <b><span class="label">Contact</span></b>
-                          </p>
-                          <hr />
-                          <p>
-                            Please use the contact form to send me a message.
-                          </p>
-                          <br />
-                          <p>
-                            <b><span class="label">Location</span></b>
-                          </p>
-                          <hr />
-                          <p>Remote Preferred</p>
-                          <p>Los Angeles, CA</p>
-                        </div>
-                        <div class="education">
-                          <p>
-                            <b><span class="label">Education</span></b>
-                          </p>
-                          <hr />
-                          <p>
-                            <b><span class="big">University of California, Los Angeles (UCLA)</span></b>
-                          </p>
-                          <p>&#8212; B.A. w/ <a target="_blank"
-                              href="https://registrar.ucla.edu/faculty-staff/courses-and-programs/major-and-minor-codes/undergraduate-specializations">Specialization
-                              in Computing</a></p>
-                          <p class="resumesmallgreytext">Specialization is similar to a minor in Computer Science</p>
-                          <br />
-                        </div>
-                        <div class="certs">
-                          <p>
-                            <b><span class="label">Certifications</span></b>
-                          </p>
-                          <hr />
-                          <p><b>FullStackOpen - </b><a
-                              href="https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/11cb9824be322b5ac41923119269b399"
-                              target="_blank">Full Stack Web Application Development</a></p>
-                          <p>
-                            <b>Coursera - </b><a
-                              href="https://www.coursera.org/account/accomplishments/specialization/M4XT46SEU4D6"
-                              target="_blank">Google IT Support</a> &amp;
-                            <a href="https://www.coursera.org/account/accomplishments/records/XP7T92FEG3W2"
-                              target="_blank">Course on Python</a>
-                          </p>
-                          <p><b>Google Digital Garage - </b><a href="digital-marketing-google-michael-parsakia.pdf"
-                              target="_blank"> Digital Marketing</a></p>
-                          <p>
-                            <b>SoloLearn - </b> <a href="https://www.sololearn.com/Certificate/1051-7163991/pdf/"
-                              target="_blank">C++ </a>
-                            &#8211;
-                            <a href="https://www.sololearn.com/Certificate/1024-7163991/pdf/"
-                              target="_blank">Javascript</a>
-                            &#8211;
-                            <a href="https://www.sololearn.com/Certificate/1014-7163991/pdf/" target="_blank">HTML </a>
-                            &#8211;
-                            <a href="https://www.sololearn.com/Certificate/1023-7163991/pdf/" target="_blank">CSS </a>
-                          </p>
-                        </div>
-                        <div class="languages">
-                          <p>
-                            <b><span class="label">Technical Skills</span></b>
-                          </p>
-                          <hr />
-                          <p><b>Web &amp; Application Development</b></p>
-                          <div class="list">
-                            <p>Languages &#8211; JavaScript, TypeScript, HTML 5, CSS 3, Python, C++</p>
-                            <p>Frontend &#8211; React, React Native, Expo, Apollo Client, Redux, Mantine UI, UI Libraries</p>
-                            <p>Backend &#8211; Apollo Server, Node.js, GraphQL, REST APIs, Express, MongoDB, Mongoose, JWT, Serverless, Next.js</p>
-                            <p>Others &#8211; Jest, Cypress, Yarn, NPM, Git, GitHub, Linux, VS Code, JSON, GCP, Firebase, Stripe, NoSQL, Microsoft Office</p>
+                        <div class="resume-container">
+                          <div class="name">
+                            <h1>Michael Parsakia</h1>
                           </div>
-                          <br />
-                        </div>
-                        <div class="softskills">
-                          <p>
-                            <b><span class="label">Other Skills</span></b>
-                          </p>
-                          <hr />
-                          <p>Leadership, Teamwork, Computer Repair, Research, Photography, Photoshop, Lightroom</p>
+                          <div class="profiletext">
+                            <p>
+                              <b><span class="label">Summary</span></b>
+                            </p>
+                            <hr />
+                            <p>
+                              Full stack developer experienced in web and mobile software
+                              development.
+                              <br />
+                              <br />
+                              <i>The information below is a brief summary of skills</i>.
+                              <br />
+                              <br />
+                              Detailed information such as work experience is available on
+                              my
+                              <a
+                                href="https://www.linkedin.com/in/mparsakia/"
+                                id="ldlinktxt"
+                                target="_blank"
+                                >LinkedIn</a
+                              >
+                              profile.<br />
+                              You may also request a copy of my full resume via the
+                              contact form.<br />
+                              <br />
+                            </p>
+                          </div>
+                          <div class="contact">
+                            <p>
+                              <b><span class="label">Contact</span></b>
+                            </p>
+                            <hr />
+                            <p>Please use the contact form to send me a message.</p>
+                            <br />
+                            <p>
+                              <b><span class="label">Location</span></b>
+                            </p>
+                            <hr />
+                            <p>Remote Preferred</p>
+                            <p>Los Angeles, CA</p>
+                          </div>
+                          <div class="education">
+                            <p>
+                              <b><span class="label">Education</span></b>
+                            </p>
+                            <hr />
+                            <p>
+                              <b
+                                ><span class="big"
+                                  >University of California, Los Angeles (UCLA)</span
+                                ></b
+                              >
+                            </p>
+                            <p>
+                              &#8212; B.A. w/
+                              <a
+                                target="_blank"
+                                href="https://registrar.ucla.edu/faculty-staff/courses-and-programs/major-and-minor-codes/undergraduate-specializations"
+                                >Specialization in Computing</a
+                              >
+                            </p>
+                            <p class="resumesmallgreytext">
+                              Specialization is similar to a minor in Computer Science
+                            </p>
+                            <br />
+                          </div>
+                          <div class="certs">
+                            <p>
+                              <b><span class="label">Certifications</span></b>
+                            </p>
+                            <hr />
+                            <p>
+                              <b>FullStackOpen - </b
+                              ><a
+                                href="https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/11cb9824be322b5ac41923119269b399"
+                                target="_blank"
+                                >Full Stack Web Application Development</a
+                              >
+                            </p>
+                            <p>
+                              <b>Coursera - </b
+                              ><a
+                                href="https://www.coursera.org/account/accomplishments/specialization/M4XT46SEU4D6"
+                                target="_blank"
+                                >Google IT Support</a
+                              >
+                              &amp;
+                              <a
+                                href="https://www.coursera.org/account/accomplishments/records/XP7T92FEG3W2"
+                                target="_blank"
+                                >Course on Python</a
+                              >
+                            </p>
+                            <p>
+                              <b>Google Digital Garage - </b
+                              ><a
+                                href="digital-marketing-google-michael-parsakia.pdf"
+                                target="_blank"
+                              >
+                                Digital Marketing</a
+                              >
+                            </p>
+                            <p>
+                              <b>SoloLearn - </b>
+                              <a
+                                href="https://www.sololearn.com/Certificate/1051-7163991/pdf/"
+                                target="_blank"
+                                >C++
+                              </a>
+                              &#8211;
+                              <a
+                                href="https://www.sololearn.com/Certificate/1024-7163991/pdf/"
+                                target="_blank"
+                                >Javascript</a
+                              >
+                              &#8211;
+                              <a
+                                href="https://www.sololearn.com/Certificate/1014-7163991/pdf/"
+                                target="_blank"
+                                >HTML
+                              </a>
+                              &#8211;
+                              <a
+                                href="https://www.sololearn.com/Certificate/1023-7163991/pdf/"
+                                target="_blank"
+                                >CSS
+                              </a>
+                            </p>
+                          </div>
+                          <div class="languages">
+                            <p>
+                              <b><span class="label">Technical Skills</span></b>
+                            </p>
+                            <hr />
+                            <p><b>Web &amp; Application Development</b></p>
+                            <div class="list">
+                              <p>
+                                Languages &#8211; JavaScript, TypeScript, HTML 5, CSS 3,
+                                Python, C++
+                              </p>
+                              <p>
+                                Frontend &#8211; React, React Native, Expo, Apollo Client,
+                                Redux, Mantine UI, UI Libraries
+                              </p>
+                              <p>
+                                Backend &#8211; Apollo Server, Node.js, GraphQL, REST
+                                APIs, Express, MongoDB, Mongoose, JWT, Serverless, Next.js
+                              </p>
+                              <p>
+                                Others &#8211; Jest, Cypress, Yarn, NPM, Git, GitHub,
+                                Linux, VS Code, JSON, GCP, Firebase, Stripe, NoSQL,
+                                Microsoft Office
+                              </p>
+                            </div>
+                            <br />
+                          </div>
+                          <div class="softskills">
+                            <p>
+                              <b><span class="label">Other Skills</span></b>
+                            </p>
+                            <hr />
+                            <p>
+                              Leadership, Teamwork, Computer Repair, Research,
+                              Photography, Photoshop, Lightroom
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -271,29 +383,141 @@
               </div>
             </div>
           </div>
-        </div>
-        <br />
-        <br />
-        <div class="accordion" id="contactAccordion">
-          <div class="acc-row">
-            <div class="acc-col">
-              <div class="acc-tabs">
-                <div class="acc-tab">
-                  <input type="checkbox" id="contactCheck" />
-                  <label class="acc-tab-label" for="contactCheck">Contact Me</label>
-                  <div class="acc-tab-content">
-                    <p class="center">
-                      Note: If you are a recruiter message me on
-                      <a href="https://www.linkedin.com/in/mparsakia/" id="ldlinktxt" target="_blank">LinkedIn</a>
-                      directly.<br />
-                      <br />
-                    </p>
-                    <div class="contactcontain">
-                      <iframe class="contactiframe"
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfEKta-jkHPP92dw_yt3gd_xSkmZa-Ssp8Aq_VUMszE2ep_SA/viewform?embedded=true"
-                        frameborder="0" marginheight="0" marginwidth="0">
-                        Loading...
-                      </iframe>
+          <br />
+          <br />
+          <div class="accordion" id="contactAccordion">
+            <div class="acc-row">
+              <div class="acc-col">
+                <div class="acc-tabs">
+                  <div class="acc-tab">
+                    <input type="checkbox" id="contactCheck" />
+                    <label class="acc-tab-label" for="contactCheck">Contact Me</label>
+                    <div class="acc-tab-content">
+                      <p class="center">
+                        Note: If you are a recruiter message me on
+                        <a
+                          href="https://www.linkedin.com/in/mparsakia/"
+                          id="ldlinktxt"
+                          target="_blank"
+                          >LinkedIn</a
+                        >
+                        directly.<br />
+                        <br />
+                      </p>
+                      <div class="contactcontain">
+                        <iframe
+                          class="contactiframe"
+                          src="https://docs.google.com/forms/d/e/1FAIpQLSfEKta-jkHPP92dw_yt3gd_xSkmZa-Ssp8Aq_VUMszE2ep_SA/viewform?embedded=true"
+                          frameborder="0"
+                          marginheight="0"
+                          marginwidth="0"
+                        >
+                          Loading...
+                        </iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <br />
+
+          <div class="accordion" id="photosAccordion">
+            <div class="acc-row">
+              <div class="acc-col">
+                <div class="acc-tabs">
+                  <div class="acc-tab">
+                    <input type="checkbox" id="photosCheck" />
+                    <label class="acc-tab-label" for="photosCheck">Photography</label>
+                    <div class="acc-tab-content">
+                      <div class="gallery">
+                        <span>
+                          Some of my best photographs, in no particular order.
+                          <br />
+                          Note: Clicking a thumbnail will open the full-size image, and
+                          may take a while on slow connections!
+                          <br />
+                          <br />
+                        </span>
+                        <a href="./img001.jpg">
+                          <img src="./thumb001.jpg" loading="lazy"
+                        /></a>
+                        <a href="./portlandhr.jpg">
+                          <img src="./portland.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img20.jpg">
+                          <img src="./thumb20.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img2.jpg">
+                          <img src="./thumb2.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img3.jpg">
+                          <img src="./thumb3.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img6.jpg">
+                          <img src="./thumb6.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img7.jpg">
+                          <img src="./thumb7.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img8.jpg">
+                          <img src="./thumb8.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img9.jpg">
+                          <img src="./thumb9.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img10.jpg">
+                          <img src="./thumb10.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img11.jpg">
+                          <img src="./thumb11.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img12.jpg">
+                          <img src="./thumb12.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img13.jpg">
+                          <img src="./thumb13.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img14.jpg">
+                          <img src="./thumb14.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img5.jpg">
+                          <img src="./thumb5.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img15.jpg" data-caption="Looks like a sloth!">
+                          <img src="./thumb15.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img16.jpg">
+                          <img src="./thumb16.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img17.jpg">
+                          <img src="./thumb17.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img4.jpg">
+                          <img src="./thumb4.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img18.jpg">
+                          <img src="./thumb18.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img19.jpg">
+                          <img src="./thumb19.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img1.jpg">
+                          <img src="./thumb1.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img21.jpg">
+                          <img src="./thumb21.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img22.jpg">
+                          <img src="./thumb22.jpg" loading="lazy"
+                        /></a>
+                        <a href="./img23.jpg">
+                          <img src="./thumb23.jpg" loading="lazy"
+                        /></a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -301,228 +525,174 @@
             </div>
           </div>
         </div>
+      </main>
+    </div>
+    <footer class="endcopyrt">
+      <p id="footer-copy">
+        <!-- JavaScript will fill in the footer here -->
+      </p>
+    </footer>
 
-        <br />
-        <br />
-
-        <div class="accordion" id="photosAccordion">
-          <div class="acc-row">
-            <div class="acc-col">
-              <div class="acc-tabs">
-                <div class="acc-tab">
-                  <input type="checkbox" id="photosCheck" />
-                  <label class="acc-tab-label" for="photosCheck">Photography</label>
-                  <div class="acc-tab-content">
-                    <div class="gallery">
-                      <span>
-                        Some of my best photographs, in no particular order.
-                        <br />
-                        Note: Clicking a thumbnail will open the full-size image, and may take a while on slow
-                        connections!
-                        <br />
-                        <br />
-                      </span>
-                      <a href="./img001.jpg"> <img src="./thumb001.jpg" loading="lazy" /></a>
-                      <a href="./portlandhr.jpg"> <img src="./portland.jpg" loading="lazy" /></a>
-                      <a href="./img20.jpg"> <img src="./thumb20.jpg" loading="lazy" /></a>
-                      <a href="./img2.jpg"> <img src="./thumb2.jpg" loading="lazy" /></a>
-                      <a href="./img3.jpg"> <img src="./thumb3.jpg" loading="lazy" /></a>
-                      <a href="./img6.jpg"> <img src="./thumb6.jpg" loading="lazy" /></a>
-                      <a href="./img7.jpg"> <img src="./thumb7.jpg" loading="lazy" /></a>
-                      <a href="./img8.jpg"> <img src="./thumb8.jpg" loading="lazy" /></a>
-                      <a href="./img9.jpg"> <img src="./thumb9.jpg" loading="lazy" /></a>
-                      <a href="./img10.jpg"> <img src="./thumb10.jpg" loading="lazy" /></a>
-                      <a href="./img11.jpg"> <img src="./thumb11.jpg" loading="lazy" /></a>
-                      <a href="./img12.jpg"> <img src="./thumb12.jpg" loading="lazy" /></a>
-                      <a href="./img13.jpg"> <img src="./thumb13.jpg" loading="lazy" /></a>
-                      <a href="./img14.jpg"> <img src="./thumb14.jpg" loading="lazy" /></a>
-                      <a href="./img5.jpg"> <img src="./thumb5.jpg" loading="lazy" /></a>
-                      <a href="./img15.jpg" data-caption="Looks like a sloth!"> <img src="./thumb15.jpg"
-                          loading="lazy" /></a>
-                      <a href="./img16.jpg"> <img src="./thumb16.jpg" loading="lazy" /></a>
-                      <a href="./img17.jpg"> <img src="./thumb17.jpg" loading="lazy" /></a>
-                      <a href="./img4.jpg"> <img src="./thumb4.jpg" loading="lazy" /></a>
-                      <a href="./img18.jpg"> <img src="./thumb18.jpg" loading="lazy" /></a>
-                      <a href="./img19.jpg"> <img src="./thumb19.jpg" loading="lazy" /></a>
-                      <a href="./img1.jpg"> <img src="./thumb1.jpg" loading="lazy" /></a>
-                      <a href="./img21.jpg"> <img src="./thumb21.jpg" loading="lazy" /></a>
-                      <a href="./img22.jpg"> <img src="./thumb22.jpg" loading="lazy" /></a>
-                      <a href="./img23.jpg"> <img src="./thumb23.jpg" loading="lazy" /></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
-  <footer class="endcopyrt">
-    <p id="footer-copy">
-      <!-- JavaScript will fill in the footer here -->
-    </p>
-  </footer>
-
-  <script>
-    // jQuery for scrolling to elements & expanding them
-    // also reworked navbar to jQuery & smoother closing after click
-    $("#navmenubtn").click(function () {
-      // need to check the CSS media query breakpoint of 800px
-      if (window.innerWidth <= 800) {
-        if (!$("#navbar").hasClass("responsive")) {
-          $("#navbar").addClass("responsive");
-        } else {
-          $("#navbar").removeClass("responsive");
-        }
-      }
-    });
-
-    $("#topact").click(function () {
-      $("html, body").animate({ scrollTop: 0 }, 750).change();
-      // If were on mobile & click the link, close the nav menu
-      if (window.innerWidth <= 800) {
-        if ($("#navbar").hasClass("responsive")) {
-          $("#navbar").removeClass("responsive");
-        }
-      }
-    });
-
-    $("#contactlink").click(function () {
-      $("#contactCheck").prop("checked", true).change();
-      if (window.innerWidth <= 800) {
-        $([document.documentElement, document.body]).animate(
-          {
-            scrollTop: $("#contactAccordion").position().top - 375,
-          },
-          750
-        );
-        if ($("#navbar").hasClass("responsive")) {
-          $("#navbar").removeClass("responsive");
-        }
-      } else {
-        $([document.documentElement, document.body]).animate(
-          {
-            scrollTop: $("#contactAccordion").position().top - 75,
-          },
-          750
-        );
-      }
-    });
-
-    $("#resumelink").click(function () {
-      $("#resumeCheck").prop("checked", true).change();
-      if (window.innerWidth <= 800) {
-        $([document.documentElement, document.body]).animate(
-          {
-            scrollTop: $("#resumeAccordion").position().top - 375,
-          },
-          750
-        );
-        if ($("#navbar").hasClass("responsive")) {
-          $("#navbar").removeClass("responsive");
-        }
-      } else {
-        $([document.documentElement, document.body]).animate(
-          {
-            scrollTop: $("#resumeAccordion").position().top - 75,
-          },
-          750
-        );
-      }
-    });
-
-    $("#photolink").click(function () {
-      $("#photosCheck").prop("checked", true).change();
-      if (window.innerWidth <= 800) {
-        $([document.documentElement, document.body]).animate(
-          {
-            scrollTop: $("#photosAccordion").position().top - 375,
-          },
-          750
-        );
-        if ($("#navbar").hasClass("responsive")) {
-          $("#navbar").removeClass("responsive");
-        }
-      } else {
-        $([document.documentElement, document.body]).animate(
-          {
-            scrollTop: $("#photosAccordion").position().top - 75,
-          },
-          750
-        );
-      }
-    });
-  </script>
-
-  <script>
-    window.onload = function () {
-      baguetteBox.run(".gallery", {
-        overlayBackgroundColor: "rgba(0,0,0,0.9)",
-      });
-    };
-  </script>
-
-  <script>
-    var dateCopyright = document.getElementById("footer-copy");
-    dateCopyright.innerHTML = `Michael Parsakia © ${new Date().getFullYear()} <br/> <a href="./privacy.html">Privacy Policy & Cookies Disclaimer</a>`;
-  </script>
-
-  <script>
-    var TxtRotate = function (el, toRotate, period) {
-      this.toRotate = toRotate;
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(period, 10) || 2000;
-      this.txt = "";
-      this.tick();
-      this.isDeleting = false;
-    };
-
-    TxtRotate.prototype.tick = function () {
-      var i = this.loopNum % this.toRotate.length;
-      var fullTxt = this.toRotate[i];
-      if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-      }
-      this.el.innerHTML = '<span class="wrapcursor">' + this.txt + "</span>";
-      var that = this;
-      var delta = 250 - Math.random() * 100;
-      if (this.isDeleting) {
-        delta /= 2;
-      }
-      if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === "") {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-      }
-      setTimeout(function () {
-        that.tick();
-      }, delta);
-    };
-
-    setTimeout(function () {
-      window.onload = (function () {
-        var elements = document.getElementsByClassName("txt-rotate");
-        for (var i = 0; i < elements.length; i++) {
-          var toRotate = elements[i].getAttribute("data-rotate");
-          var period = elements[i].getAttribute("data-period");
-          if (toRotate) {
-            console.log("✅");
-            new TxtRotate(elements[i], JSON.parse(toRotate), period);
-            console.log("🚀 Hey there! Having fun? Add me on github! 😊 https://github.com/mparsakia");
+    <script>
+      // jQuery for scrolling to elements & expanding them
+      // also reworked navbar to jQuery & smoother closing after click
+      $("#navmenubtn").click(function () {
+        // need to check the CSS media query breakpoint of 800px
+        if (window.innerWidth <= 800) {
+          if (!$("#navbar").hasClass("responsive")) {
+            $("#navbar").addClass("responsive");
+          } else {
+            $("#navbar").removeClass("responsive");
           }
         }
-      })();
-    }, 1500);
-  </script>
-</body>
+      });
 
+      $("#topact").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 750).change();
+        // If were on mobile & click the link, close the nav menu
+        if (window.innerWidth <= 800) {
+          if ($("#navbar").hasClass("responsive")) {
+            $("#navbar").removeClass("responsive");
+          }
+        }
+      });
+
+      $("#contactlink").click(function () {
+        $("#contactCheck").prop("checked", true).change();
+        if (window.innerWidth <= 800) {
+          $([document.documentElement, document.body]).animate(
+            {
+              scrollTop: $("#contactAccordion").position().top - 375,
+            },
+            750,
+          );
+          if ($("#navbar").hasClass("responsive")) {
+            $("#navbar").removeClass("responsive");
+          }
+        } else {
+          $([document.documentElement, document.body]).animate(
+            {
+              scrollTop: $("#contactAccordion").position().top - 75,
+            },
+            750,
+          );
+        }
+      });
+
+      $("#resumelink").click(function () {
+        $("#resumeCheck").prop("checked", true).change();
+        if (window.innerWidth <= 800) {
+          $([document.documentElement, document.body]).animate(
+            {
+              scrollTop: $("#resumeAccordion").position().top - 375,
+            },
+            750,
+          );
+          if ($("#navbar").hasClass("responsive")) {
+            $("#navbar").removeClass("responsive");
+          }
+        } else {
+          $([document.documentElement, document.body]).animate(
+            {
+              scrollTop: $("#resumeAccordion").position().top - 75,
+            },
+            750,
+          );
+        }
+      });
+
+      $("#photolink").click(function () {
+        $("#photosCheck").prop("checked", true).change();
+        if (window.innerWidth <= 800) {
+          $([document.documentElement, document.body]).animate(
+            {
+              scrollTop: $("#photosAccordion").position().top - 375,
+            },
+            750,
+          );
+          if ($("#navbar").hasClass("responsive")) {
+            $("#navbar").removeClass("responsive");
+          }
+        } else {
+          $([document.documentElement, document.body]).animate(
+            {
+              scrollTop: $("#photosAccordion").position().top - 75,
+            },
+            750,
+          );
+        }
+      });
+    </script>
+
+    <script>
+      window.onload = function () {
+        baguetteBox.run(".gallery", {
+          overlayBackgroundColor: "rgba(0,0,0,0.9)",
+        });
+      };
+    </script>
+
+    <script>
+      var dateCopyright = document.getElementById("footer-copy");
+      dateCopyright.innerHTML = `Michael Parsakia © ${new Date().getFullYear()} <br/> <a href="./privacy.html">Privacy Policy & Cookies Disclaimer</a>`;
+    </script>
+
+    <script>
+      var TxtRotate = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = "";
+        this.tick();
+        this.isDeleting = false;
+      };
+
+      TxtRotate.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+        this.el.innerHTML = '<span class="wrapcursor">' + this.txt + "</span>";
+        var that = this;
+        var delta = 250 - Math.random() * 100;
+        if (this.isDeleting) {
+          delta /= 2;
+        }
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+
+      setTimeout(function () {
+        window.onload = (function () {
+          var elements = document.getElementsByClassName("txt-rotate");
+          for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute("data-rotate");
+            var period = elements[i].getAttribute("data-period");
+            if (toRotate) {
+              console.log("✅");
+              new TxtRotate(elements[i], JSON.parse(toRotate), period);
+              console.log(
+                "🚀 Hey there! Having fun? Add me on github! 😊 https://github.com/mparsakia",
+              );
+            }
+          }
+        })();
+      }, 1500);
+    </script>
+  </body>
 </html>
 
 <!--
