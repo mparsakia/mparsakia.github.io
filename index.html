@@ -21,25 +21,22 @@
       });
     </script>
     <script
+      fetchpriority="high"
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-148367832-1"
-    ></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-148367832-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "UA-148367832-1");
     </script>
-    <script async src="./baguetteBox.js"></script>
+    <script fetchpriority="high" src="./baguetteBox.js"></script>
     <link rel="stylesheet" href="./baguetteBox.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Volkhov:400,700&display=swap"
