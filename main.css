@@ -12,13 +12,13 @@
   --clr-accent: #ffb550;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(255, 255, 255, 0.75);
+  --clr-nav-bg: rgba(255, 255, 255, 0.85);
   --clr-nav-text: #000;
   --clr-dark: #242424;
   --clr-card-bg: rgba(255, 255, 255, 0.7);
   --clr-card-border: rgba(255, 255, 255, 0.4);
   --blur-card: 8px;
-  --blur-nav: 16px;
+  --blur-nav: 8px;
   --card-blue: #254c94;
   --card-green: #0f7422;
   --card-purple: #4e3a7a;
@@ -35,13 +35,13 @@
   --clr-accent: #ffb550;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(255, 255, 255, 0.75);
+  --clr-nav-bg: rgba(255, 255, 255, 0.85);
   --clr-nav-text: #000;
   --clr-dark: #242424;
   --clr-card-bg: rgba(255, 255, 255, 0.7);
   --clr-card-border: rgba(255, 255, 255, 0.4);
   --blur-card: 8px;
-  --blur-nav: 16px;
+  --blur-nav: 8px;
   --card-blue: #254c94;
   --card-green: #0f7422;
   --card-purple: #4e3a7a;
@@ -67,7 +67,7 @@
     --clr-label-bg: #333;
     --clr-border: #555;
     --blur-card: 8px;
-    --blur-nav: 16px;
+    --blur-nav: 8px;
   }
 }
 
@@ -86,7 +86,7 @@
   --clr-label-bg: #333;
   --clr-border: #555;
   --blur-card: 8px;
-  --blur-nav: 16px;
+  --blur-nav: 8px;
 }
 
 html {
@@ -212,6 +212,7 @@ a {
   background-color: var(--clr-nav-bg);
   backdrop-filter: blur(var(--blur-nav));
   -webkit-backdrop-filter: blur(var(--blur-nav));
+  position: relative;
   overflow: hidden;
   position: sticky;
   position: -webkit-sticky;
@@ -238,6 +239,39 @@ a {
   line-height: 60px;
 }
 
+.navblur {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--clr-nav-bg);
+  pointer-events: none;
+}
+
+.layer1 {
+  top: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.layer2 {
+  top: calc(100% + 1px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.layer3 {
+  top: calc(100% + 2px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.layer4 {
+  top: calc(100% + 3px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
 #topact {
   color: var(--clr-text);
 }
@@ -249,10 +283,6 @@ a {
 }
 
 
-.active {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: var(--clr-text);
-}
 
 .topnav .icon {
   display: none;
@@ -387,6 +417,10 @@ a {
   line-height: 1.2;
 }
 
+#footer-copy {
+  color: var(--clr-text);
+}
+
 #ldlink {
   color: #fff;
   background-color: #0070aa;
@@ -428,6 +462,12 @@ a {
 
 .contactcontain {
   text-align: center;
+  background-color: var(--clr-card-bg);
+  backdrop-filter: blur(var(--blur-card));
+  -webkit-backdrop-filter: blur(var(--blur-card));
+  border: 1px solid var(--clr-card-border);
+  border-radius: 12px;
+  padding: 10px;
 }
 
 .contactiframe {
@@ -463,7 +503,7 @@ a {
 .resumesmallgreytext {
   font-size: 0.8em !important;
   line-height: 2 !important;
-  color: #444444;
+  color: var(--clr-text);
 }
 
 .resume-container {
@@ -828,8 +868,11 @@ a {
 }
 .acc-tab-content {
   max-height: 0;
-  color: var(--clr-dark);
-  background: white;
+  color: var(--clr-text);
+  background-color: var(--clr-card-bg);
+  backdrop-filter: blur(var(--blur-card));
+  -webkit-backdrop-filter: blur(var(--blur-card));
+  border: 1px solid var(--clr-card-border);
   transition: all 0.75s;
   /* padding: 0 35px; */
 }
