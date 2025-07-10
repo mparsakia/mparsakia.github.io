@@ -13,13 +13,13 @@
   --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(255, 255, 255, 0.85);
+  --clr-nav-bg: rgba(255, 255, 255, 0.9);
   --clr-nav-text: #000;
   --clr-dark: #242424;
   --clr-card-bg: rgba(255, 255, 255, 0.7);
   --clr-card-border: rgba(255, 255, 255, 0.4);
   --blur-card: 8px;
-  --blur-nav: 8px;
+  --blur-nav: 12px;
   --card-blue: #254c94;
   --card-green: #0f7422;
   --card-purple: #4e3a7a;
@@ -37,13 +37,13 @@
   --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(255, 255, 255, 0.85);
+  --clr-nav-bg: rgba(255, 255, 255, 0.9);
   --clr-nav-text: #000;
   --clr-dark: #242424;
   --clr-card-bg: rgba(255, 255, 255, 0.7);
   --clr-card-border: rgba(255, 255, 255, 0.4);
   --blur-card: 8px;
-  --blur-nav: 8px;
+  --blur-nav: 12px;
   --card-blue: #254c94;
   --card-green: #0f7422;
   --card-purple: #4e3a7a;
@@ -62,7 +62,7 @@
     --clr-text-on-accent: #000;
     --clr-scrollbar-thumb: #444;
     --clr-scrollbar-thumb-hover: #ffb550;
-    --clr-nav-bg: rgba(0, 0, 0, 0.7);
+    --clr-nav-bg: rgba(0, 0, 0, 0.8);
     --clr-nav-text: #fff;
     --clr-dark: #1f1f1f;
     --clr-card-bg: rgba(255, 255, 255, 0.1);
@@ -70,7 +70,7 @@
     --clr-label-bg: var(--clr-card-bg);
     --clr-border: #555;
     --blur-card: 8px;
-    --blur-nav: 8px;
+    --blur-nav: 12px;
   }
 }
 
@@ -82,7 +82,7 @@
   --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #444;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(0, 0, 0, 0.7);
+  --clr-nav-bg: rgba(0, 0, 0, 0.8);
   --clr-nav-text: #fff;
   --clr-dark: #1f1f1f;
   --clr-card-bg: rgba(255, 255, 255, 0.1);
@@ -90,7 +90,7 @@
   --clr-label-bg: var(--clr-card-bg);
   --clr-border: #555;
   --blur-card: 8px;
-  --blur-nav: 8px;
+  --blur-nav: 12px;
 }
 
 html {
@@ -244,6 +244,16 @@ a {
   line-height: 60px;
 }
 
+.flex-apart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navcontrols {
+  display: flex;
+  align-items: center;
+}
 
 .navwrap::after {
   content: "";
@@ -268,7 +278,6 @@ a {
 
 #topact {
   color: var(--clr-text);
-  margin-right: auto;
 }
 
 .topnav a:hover {
@@ -276,8 +285,6 @@ a {
   color: var(--clr-text-on-accent);
   text-decoration: underline;
 }
-
-
 
 .topnav .icon {
   display: none;
@@ -291,19 +298,21 @@ a {
   .topnav a {
     line-height: 60px;
   }
-  .topnav a:not(:first-child):not(#themeToggle):not(.icon) {
+  .topnav > a:not(#topact) {
     display: none;
   }
+  .navcontrols {
+    margin-left: auto;
+  }
   #themeToggle,
-  .topnav a.icon {
+  .topnav .icon {
     display: block;
   }
   #themeToggle {
     order: 1;
-    margin-left: auto;
     padding: 0 10px;
   }
-  .topnav a.icon {
+  .topnav .icon {
     order: 2;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -324,10 +333,14 @@ a {
     right: 0;
     top: 0;
   }
-  .topnav.responsive a {
+  .topnav.responsive > a,
+  .topnav.responsive .navcontrols {
     display: block;
     width: 100%;
     text-align: left;
+  }
+  .topnav.responsive .navcontrols {
+    display: flex;
   }
 }
 
@@ -423,7 +436,10 @@ a {
 }
 
 #footer-copy {
-  color: var(--clr-text);
+  color: var(--clr-text-on-accent);
+}
+#footer-copy a {
+  color: inherit;
 }
 
 #ldlink {
@@ -521,11 +537,7 @@ a {
   padding: 10px 5px;
   word-wrap: break-word;
   max-width: 1000px;
-  background-color: var(--clr-card-bg);
-  backdrop-filter: blur(var(--blur-card));
-  -webkit-backdrop-filter: blur(var(--blur-card));
-  border: 1px solid var(--clr-card-border);
-  border-radius: 12px;
+  background-color: var(--clr-background);
 }
 
 .resume-container hr {
@@ -551,7 +563,7 @@ a {
   font-family: Volkhov, serif;
   font-weight: 700;
   font-size: 40px;
-  background-color: var(--clr-card-bg);
+  background-color: var(--clr-border);
   border-radius: 12px;
   text-align: center;
   color: var(--clr-text);
@@ -878,7 +890,6 @@ a {
   background-color: var(--clr-card-bg);
   backdrop-filter: blur(var(--blur-card));
   -webkit-backdrop-filter: blur(var(--blur-card));
-  border: 0 solid var(--clr-card-border);
   transition: all 0.75s;
   /* padding: 0 35px; */
 }
@@ -907,7 +918,6 @@ a {
 .accordion input:checked ~ .acc-tab-content {
   max-height: 100%;
   padding: 50px 0;
-  border-width: 1px;
 }
 
 /* ================================================================= */

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>www.parsakia.com</title>
@@ -66,19 +66,31 @@
 
   <body>
     <nav class="navwrap">
-      <div class="topnav" id="navbar">
+      <div class="topnav flex-apart" id="navbar">
         <a href="#" id="topact">Home</a>
+        <div class="navcontrols">
+          <a
+            href="javascript:void(0);"
+            id="themeToggle"
+            aria-label="Toggle theme"
+            >🌙</a
+          >
+          <a href="javascript:void(0);" class="icon" id="navmenubtn">
+            <b>≡</b>
+          </a>
+        </div>
         <a href="#" id="resumelink">Resume</a>
         <a href="#" id="contactlink">Contact</a>
         <a href="#" id="photolink">Photography</a>
-        <a href="https://www.linkedin.com/in/mparsakia/" id="ldlink" target="_blank"
+        <a
+          href="https://www.linkedin.com/in/mparsakia/"
+          id="ldlink"
+          target="_blank"
           >LinkedIn</a
         >
-        <a href="https://github.com/mparsakia" id="ghlink" target="_blank">GitHub</a>
-        <a href="javascript:void(0);" id="themeToggle" aria-label="Toggle theme">🌙</a>
-        <a href="javascript:void(0);" class="icon" id="navmenubtn">
-          <b>≡</b>
-        </a>
+        <a href="https://github.com/mparsakia" id="ghlink" target="_blank"
+          >GitHub</a
+        >
       </div>
     </nav>
 
@@ -105,10 +117,10 @@
           <h1>Welcome!</h1>
           <hr />
           <p>
-            Thanks for visiting my website. I use this website to showcase some of my
-            recent programming projects, photography, and short resume is available to
-            view. If you'd like to send me a message please use the web form linked
-            "Contact" above.
+            Thanks for visiting my website. I use this website to showcase some
+            of my recent programming projects, photography, and short resume is
+            available to view. If you'd like to send me a message please use the
+            web form linked "Contact" above.
           </p>
           <h2>Example Projects & Programming</h2>
           <div class="flexcard">
@@ -119,12 +131,15 @@
                 class="card hover"
               >
                 <span class="cardheadergreen">FullStackOpen</span>
-                <span class="cardsubheader">Full Stack Web Dev w/ MERN Stack</span>
+                <span class="cardsubheader"
+                  >Full Stack Web Dev w/ MERN Stack</span
+                >
                 <span class="carddesc">
-                  Full stack web application development utilizing MongoDB, ExpressJS,
-                  ReactJS, NodeJS. Testing with Jest and end-to-end using Cypress.
-                  TypeScript, REST APIs, GraphQL, and React Native included. This is my
-                  coursework in University of Helsinki's MOOC FullStackOpen 2020.
+                  Full stack web application development utilizing MongoDB,
+                  ExpressJS, ReactJS, NodeJS. Testing with Jest and end-to-end
+                  using Cypress. TypeScript, REST APIs, GraphQL, and React
+                  Native included. This is my coursework in University of
+                  Helsinki's MOOC FullStackOpen 2020.
                 </span>
               </a>
               <a
@@ -135,10 +150,10 @@
                 <span class="cardheaderblue">C++ Practice &amp; Notes</span>
                 <span class="cardsubheader">C++</span>
                 <span class="carddesc">
-                  Assignments, practice problems, notes, and other C++ related things.
-                  This repository is not a single project, it is a collection of programs
-                  I have practiced writing in C++, and a partial documentation of my
-                  learning progress.
+                  Assignments, practice problems, notes, and other C++ related
+                  things. This repository is not a single project, it is a
+                  collection of programs I have practiced writing in C++, and a
+                  partial documentation of my learning progress.
                 </span>
               </a>
               <a
@@ -150,8 +165,8 @@
                 <span class="cardsubheader">HTML / CSS / JS</span>
                 <span class="carddesc">
                   The purpose of this project was to refresh my knowledge of web
-                  development and act as a sort of playground to try new things. The
-                  repository contains the live code for this website.
+                  development and act as a sort of playground to try new things.
+                  The repository contains the live code for this website.
                 </span>
               </a>
               <a
@@ -174,18 +189,23 @@
                 <span class="cardheaderteal">OSRS Duel Simulator</span>
                 <span class="cardsubheader">C++ CLI</span>
                 <span class="carddesc">
-                  Inspired by monte-carlo simulations, this is a simulator for duel arena
-                  staking outcomes in Oldschool Runescape. The program simulates 1 million
-                  duels (gambles), comparing in-game levels, tests which player has PID,
-                  and outputs the percentage chance to win the stake.
+                  Inspired by monte-carlo simulations, this is a simulator for
+                  duel arena staking outcomes in Oldschool Runescape. The
+                  program simulates 1 million duels (gambles), comparing in-game
+                  levels, tests which player has PID, and outputs the percentage
+                  chance to win the stake.
                 </span>
               </a>
-              <a href="https://github.com/mparsakia/" target="_blank" class="card hover">
+              <a
+                href="https://github.com/mparsakia/"
+                target="_blank"
+                class="card hover"
+              >
                 <span class="cardheadergreen">GitHub</span>
                 <span class="cardsubheader">Browse my profile...</span>
                 <span class="carddesc"
-                  >Check out some of the other repositories I have on my github profile
-                  too!</span
+                  >Check out some of the other repositories I have on my github
+                  profile too!</span
                 >
               </a>
             </section>
@@ -199,7 +219,9 @@
                 <div class="acc-tabs">
                   <div class="acc-tab">
                     <input type="checkbox" id="resumeCheck" checked />
-                    <label class="acc-tab-label" for="resumeCheck">Summary Resume</label>
+                    <label class="acc-tab-label" for="resumeCheck"
+                      >Summary Resume</label
+                    >
                     <div class="acc-tab-content">
                       <div class="wmainres">
                         <!-- <p align="center">Please contact me or check my <a href="https://www.linkedin.com/in/mparsakia/"
@@ -214,15 +236,18 @@
                             </p>
                             <hr />
                             <p>
-                              Full stack developer experienced in web and mobile software
-                              development.
+                              Full stack developer experienced in web and mobile
+                              software development.
                               <br />
                               <br />
-                              <i>The information below is a brief summary of skills</i>.
+                              <i
+                                >The information below is a brief summary of
+                                skills</i
+                              >.
                               <br />
                               <br />
-                              Detailed information such as work experience is available on
-                              my
+                              Detailed information such as work experience is
+                              available on my
                               <a
                                 href="https://www.linkedin.com/in/mparsakia/"
                                 id="ldlinktxt"
@@ -230,8 +255,8 @@
                                 >LinkedIn</a
                               >
                               profile.<br />
-                              You may also request a copy of my full resume via the
-                              contact form.<br />
+                              You may also request a copy of my full resume via
+                              the contact form.<br />
                               <br />
                             </p>
                           </div>
@@ -240,7 +265,9 @@
                               <b><span class="label">Contact</span></b>
                             </p>
                             <hr />
-                            <p>Please use the contact form to send me a message.</p>
+                            <p>
+                              Please use the contact form to send me a message.
+                            </p>
                             <br />
                             <p>
                               <b><span class="label">Location</span></b>
@@ -257,7 +284,8 @@
                             <p>
                               <b
                                 ><span class="big"
-                                  >University of California, Los Angeles (UCLA)</span
+                                  >University of California, Los Angeles
+                                  (UCLA)</span
                                 ></b
                               >
                             </p>
@@ -270,7 +298,8 @@
                               >
                             </p>
                             <p class="resumesmallgreytext">
-                              Specialization is similar to a minor in Computer Science
+                              Specialization is similar to a minor in Computer
+                              Science
                             </p>
                             <br />
                           </div>
@@ -345,21 +374,22 @@
                             <p><b>Web &amp; Application Development</b></p>
                             <div class="list">
                               <p>
-                                Languages &#8211; JavaScript, TypeScript, HTML 5, CSS 3,
-                                Python, C++
+                                Languages &#8211; JavaScript, TypeScript, HTML
+                                5, CSS 3, Python, C++
                               </p>
                               <p>
-                                Frontend &#8211; React, React Native, Expo, Apollo Client,
-                                Redux, Mantine UI, UI Libraries
+                                Frontend &#8211; React, React Native, Expo,
+                                Apollo Client, Redux, Mantine UI, UI Libraries
                               </p>
                               <p>
-                                Backend &#8211; Apollo Server, Node.js, GraphQL, REST
-                                APIs, Express, MongoDB, Mongoose, JWT, Serverless, Next.js
+                                Backend &#8211; Apollo Server, Node.js, GraphQL,
+                                REST APIs, Express, MongoDB, Mongoose, JWT,
+                                Serverless, Next.js
                               </p>
                               <p>
-                                Others &#8211; Jest, Cypress, Yarn, NPM, Git, GitHub,
-                                Linux, VS Code, JSON, GCP, Firebase, Stripe, NoSQL,
-                                Microsoft Office
+                                Others &#8211; Jest, Cypress, Yarn, NPM, Git,
+                                GitHub, Linux, VS Code, JSON, GCP, Firebase,
+                                Stripe, NoSQL, Microsoft Office
                               </p>
                             </div>
                             <br />
@@ -390,7 +420,9 @@
                 <div class="acc-tabs">
                   <div class="acc-tab">
                     <input type="checkbox" id="contactCheck" />
-                    <label class="acc-tab-label" for="contactCheck">Contact Me</label>
+                    <label class="acc-tab-label" for="contactCheck"
+                      >Contact Me</label
+                    >
                     <div class="acc-tab-content">
                       <p class="center">
                         Note: If you are a recruiter message me on
@@ -430,14 +462,16 @@
                 <div class="acc-tabs">
                   <div class="acc-tab">
                     <input type="checkbox" id="photosCheck" />
-                    <label class="acc-tab-label" for="photosCheck">Photography</label>
+                    <label class="acc-tab-label" for="photosCheck"
+                      >Photography</label
+                    >
                     <div class="acc-tab-content">
                       <div class="gallery">
                         <span>
                           Some of my best photographs, in no particular order.
                           <br />
-                          Note: Clicking a thumbnail will open the full-size image, and
-                          may take a while on slow connections!
+                          Note: Clicking a thumbnail will open the full-size
+                          image, and may take a while on slow connections!
                           <br />
                           <br />
                         </span>
@@ -486,7 +520,10 @@
                         <a href="./img5.jpg">
                           <img src="./thumb5.jpg" loading="lazy"
                         /></a>
-                        <a href="./img15.jpg" data-caption="Looks like a sloth!">
+                        <a
+                          href="./img15.jpg"
+                          data-caption="Looks like a sloth!"
+                        >
                           <img src="./thumb15.jpg" loading="lazy"
                         /></a>
                         <a href="./img16.jpg">
@@ -628,7 +665,9 @@
         const toggle = document.getElementById("themeToggle");
         if (!toggle) return;
         const preferred = localStorage.getItem("theme");
-        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const systemDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
         const starting = preferred || (systemDark ? "dark" : "light");
         document.documentElement.setAttribute("data-theme", starting);
         toggle.textContent = starting === "dark" ? "☀️" : "🌙";
@@ -641,7 +680,6 @@
         });
       })();
     </script>
-
 
     <script>
       var dateCopyright = document.getElementById("footer-copy");
