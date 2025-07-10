@@ -13,10 +13,10 @@
   --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(255, 255, 255, 0.9);
+  --clr-nav-bg: rgba(0, 0, 0, 0.5);
   --clr-nav-text: #000;
   --clr-dark: #242424;
-  --clr-card-bg: rgba(255, 255, 255, 0.7);
+  --clr-card-bg: rgba(0, 0, 0, 0.05);
   --clr-card-border: rgba(255, 255, 255, 0.4);
   --blur-card: 8px;
   --blur-nav: 12px;
@@ -37,10 +37,10 @@
   --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(255, 255, 255, 0.9);
+  --clr-nav-bg: rgba(0, 0, 0, 0.5);
   --clr-nav-text: #000;
   --clr-dark: #242424;
-  --clr-card-bg: rgba(255, 255, 255, 0.7);
+  --clr-card-bg: rgba(0, 0, 0, 0.05);
   --clr-card-border: rgba(255, 255, 255, 0.4);
   --blur-card: 8px;
   --blur-nav: 12px;
@@ -462,7 +462,6 @@ a {
 
 #themeToggle {
   cursor: pointer;
-  margin-left: 10px;
 }
 
 #themeToggle:hover {
@@ -719,7 +718,7 @@ a {
   backdrop-filter: blur(var(--blur-card));
   -webkit-backdrop-filter: blur(var(--blur-card));
   border: 1px solid var(--clr-card-border);
-  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.05);
 }
 
 .hover {
@@ -728,7 +727,7 @@ a {
 
 .hover:hover {
   transition: all 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.1);
   transform: scale(1.09, 1.09);
   z-index: 10;
 }
