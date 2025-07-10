@@ -6,20 +6,20 @@
 */
 
 :root {
-  --clr-background: #eef2f6;
+  --clr-background: #fafafa;
   --clr-text: #000;
   --clr-link: #1e3d7a;
   --clr-accent: #ffb550;
   --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(0, 0, 0, 0.5);
+  --clr-nav-bg: #fafafad3;
   --clr-nav-text: #000;
   --clr-dark: #242424;
   --clr-card-bg: rgba(0, 0, 0, 0.05);
   --clr-card-border: rgba(255, 255, 255, 0.4);
-  --blur-card: 8px;
-  --blur-nav: 12px;
+  --blur-card: 6px;
+  --blur-nav: 6px;
   --card-blue: #254c94;
   --card-green: #0f7422;
   --card-purple: #4e3a7a;
@@ -30,20 +30,20 @@
 }
 
 :root[data-theme="light"] {
-  --clr-background: #eef2f6;
+  --clr-background: #fafafa;
   --clr-text: #000;
   --clr-link: #1e3d7a;
   --clr-accent: #ffb550;
   --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(0, 0, 0, 0.5);
+  --clr-nav-bg: #fafafad3;
   --clr-nav-text: #000;
   --clr-dark: #242424;
   --clr-card-bg: rgba(0, 0, 0, 0.05);
-  --clr-card-border: rgba(255, 255, 255, 0.4);
-  --blur-card: 8px;
-  --blur-nav: 12px;
+  --clr-card-border: rgba(255, 255, 255, 0);
+  --blur-card: 6px;
+  --blur-nav: 6px;
   --card-blue: #254c94;
   --card-green: #0f7422;
   --card-purple: #4e3a7a;
@@ -57,12 +57,12 @@
   :root {
     --clr-background: #121212;
     --clr-text: #f0f0f0;
-    --clr-link: #8ab4f8;
+    --clr-link: #3b86ff;
     --clr-accent: #ffb550;
     --clr-text-on-accent: #000;
     --clr-scrollbar-thumb: #444;
     --clr-scrollbar-thumb-hover: #ffb550;
-    --clr-nav-bg: rgba(0, 0, 0, 0.8);
+    --clr-nav-bg: #121212d3;
     --clr-nav-text: #fff;
     --clr-dark: #1f1f1f;
     --clr-card-bg: rgba(255, 255, 255, 0.1);
@@ -77,12 +77,12 @@
 :root[data-theme="dark"] {
   --clr-background: #121212;
   --clr-text: #f0f0f0;
-  --clr-link: #8ab4f8;
+  --clr-link: #3b86ff;
   --clr-accent: #ffb550;
   --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #444;
   --clr-scrollbar-thumb-hover: #ffb550;
-  --clr-nav-bg: rgba(0, 0, 0, 0.8);
+  --clr-nav-bg: #121212d3;
   --clr-nav-text: #fff;
   --clr-dark: #1f1f1f;
   --clr-card-bg: rgba(255, 255, 255, 0.1);
@@ -438,8 +438,9 @@ a {
 #footer-copy {
   color: var(--clr-text-on-accent);
 }
+
 #footer-copy a {
-  color: inherit;
+  color: var(--clr-link);
 }
 
 #ldlink {
@@ -483,12 +484,6 @@ a {
 
 .contactcontain {
   text-align: center;
-  background-color: var(--clr-card-bg);
-  backdrop-filter: blur(var(--blur-card));
-  -webkit-backdrop-filter: blur(var(--blur-card));
-  border: 1px solid var(--clr-card-border);
-  border-radius: 12px;
-  padding: 10px;
 }
 
 .contactiframe {
@@ -536,7 +531,6 @@ a {
   padding: 10px 5px;
   word-wrap: break-word;
   max-width: 1000px;
-  background-color: var(--clr-background);
 }
 
 .resume-container hr {
@@ -717,7 +711,6 @@ a {
   background-color: var(--clr-card-bg);
   backdrop-filter: blur(var(--blur-card));
   -webkit-backdrop-filter: blur(var(--blur-card));
-  border: 1px solid var(--clr-card-border);
   box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.05);
 }
 
@@ -727,8 +720,8 @@ a {
 
 .hover:hover {
   transition: all 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
-  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.1);
-  transform: scale(1.09, 1.09);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1, 1.1);
   z-index: 10;
 }
 
