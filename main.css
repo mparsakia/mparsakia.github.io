@@ -10,6 +10,7 @@
   --clr-text: #000;
   --clr-link: #1e3d7a;
   --clr-accent: #ffb550;
+  --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
   --clr-nav-bg: rgba(255, 255, 255, 0.85);
@@ -24,7 +25,7 @@
   --card-purple: #4e3a7a;
   --card-red: #9e2b2b;
   --card-teal: #21989c;
-  --clr-label-bg: #dcdcdc;
+  --clr-label-bg: var(--clr-card-bg);
   --clr-border: #bdbdbd;
 }
 
@@ -33,6 +34,7 @@
   --clr-text: #000;
   --clr-link: #1e3d7a;
   --clr-accent: #ffb550;
+  --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #a9a9a9;
   --clr-scrollbar-thumb-hover: #ffb550;
   --clr-nav-bg: rgba(255, 255, 255, 0.85);
@@ -47,7 +49,7 @@
   --card-purple: #4e3a7a;
   --card-red: #9e2b2b;
   --card-teal: #21989c;
-  --clr-label-bg: #dcdcdc;
+  --clr-label-bg: var(--clr-card-bg);
   --clr-border: #bdbdbd;
 }
 
@@ -57,6 +59,7 @@
     --clr-text: #f0f0f0;
     --clr-link: #8ab4f8;
     --clr-accent: #ffb550;
+    --clr-text-on-accent: #000;
     --clr-scrollbar-thumb: #444;
     --clr-scrollbar-thumb-hover: #ffb550;
     --clr-nav-bg: rgba(0, 0, 0, 0.7);
@@ -64,7 +67,7 @@
     --clr-dark: #1f1f1f;
     --clr-card-bg: rgba(255, 255, 255, 0.1);
     --clr-card-border: rgba(255, 255, 255, 0.2);
-    --clr-label-bg: #333;
+    --clr-label-bg: var(--clr-card-bg);
     --clr-border: #555;
     --blur-card: 8px;
     --blur-nav: 8px;
@@ -76,6 +79,7 @@
   --clr-text: #f0f0f0;
   --clr-link: #8ab4f8;
   --clr-accent: #ffb550;
+  --clr-text-on-accent: #000;
   --clr-scrollbar-thumb: #444;
   --clr-scrollbar-thumb-hover: #ffb550;
   --clr-nav-bg: rgba(0, 0, 0, 0.7);
@@ -83,7 +87,7 @@
   --clr-dark: #1f1f1f;
   --clr-card-bg: rgba(255, 255, 255, 0.1);
   --clr-card-border: rgba(255, 255, 255, 0.2);
-  --clr-label-bg: #333;
+  --clr-label-bg: var(--clr-card-bg);
   --clr-border: #555;
   --blur-card: 8px;
   --blur-nav: 8px;
@@ -166,7 +170,7 @@ a {
 .wideheader h1 {
   font-family: Volkhov, serif;
   text-align: center;
-  color: var(--clr-text);
+  color: var(--clr-text-on-accent);
   font-size: 36px;
   line-height: 1;
   font-weight: 700;
@@ -239,37 +243,26 @@ a {
   line-height: 60px;
 }
 
-.navblur {
+
+.navwrap::after {
+  content: "";
   position: absolute;
   left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: var(--clr-nav-bg);
-  pointer-events: none;
-}
-
-.layer1 {
   top: 100%;
+  width: 100%;
+  height: 8px;
+  pointer-events: none;
+  background-color: var(--clr-nav-bg);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.7) 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    rgba(255, 255, 255, 0)
+  );
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-}
-
-.layer2 {
-  top: calc(100% + 1px);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-}
-
-.layer3 {
-  top: calc(100% + 2px);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.layer4 {
-  top: calc(100% + 3px);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 #topact {
@@ -278,7 +271,7 @@ a {
 
 .topnav a:hover {
   background-color: var(--clr-accent);
-  color: var(--clr-text);
+  color: var(--clr-text-on-accent);
   text-decoration: underline;
 }
 
@@ -296,7 +289,7 @@ a {
   .topnav a {
     line-height: 60px;
   }
-  .topnav a:not(:first-child) {
+  .topnav a:not(:first-child):not(#themeToggle) {
     display: none;
   }
   .topnav a.icon {
@@ -307,9 +300,14 @@ a {
     padding: 0 26px;
     font-size: 32px;
   }
+  #themeToggle {
+    float: right;
+    display: block;
+    padding: 0 10px;
+  }
   .topnav a:hover {
     background-color: var(--clr-accent);
-    color: var(--clr-text);
+    color: var(--clr-text-on-accent);
   }
   .topnav.responsive {
     position: relative;
@@ -341,7 +339,7 @@ a {
 .copyrt p {
   font-size: 14px;
   text-align: center;
-  color: var(--clr-text);
+  color: var(--clr-text-on-accent);
 }
 
 .footgrid {
@@ -391,7 +389,7 @@ a {
 
 .footmap a:hover {
   background-color: var(--clr-accent);
-  color: var(--clr-text);
+  color: var(--clr-text-on-accent);
   border-radius: 50px;
 }
 
@@ -409,7 +407,7 @@ a {
   margin: 0 auto;
   width: 100%;
   background-color: var(--clr-accent);
-  color: var(--clr-text);
+  color: var(--clr-text-on-accent);
   text-align: center;
   font-size: 14px;
   font-weight: 700;
@@ -462,10 +460,7 @@ a {
 
 .contactcontain {
   text-align: center;
-  background-color: var(--clr-card-bg);
-  backdrop-filter: blur(var(--blur-card));
-  -webkit-backdrop-filter: blur(var(--blur-card));
-  border: 1px solid var(--clr-card-border);
+  background-color: transparent;
   border-radius: 12px;
   padding: 10px;
 }
@@ -545,7 +540,7 @@ a {
   font-family: Volkhov, serif;
   font-weight: 700;
   font-size: 40px;
-  background-color: var(--clr-label-bg);
+  background-color: var(--clr-card-bg);
   border-radius: 12px;
   text-align: center;
   color: var(--clr-text);
@@ -782,7 +777,7 @@ a {
 .cardsubheader {
   display: block;
   background-color: var(--clr-accent);
-  color: var(--clr-text);
+  color: var(--clr-text-on-accent);
   padding: 5px;
   font-size: 18px;
 }
