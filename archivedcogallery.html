@@ -1,24 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <script>
-      H.init("kevqkq5g", {
-        environment: "production",
-        version: "web:v1",
-        networkRecording: {
-          enabled: true,
-          recordHeadersAndBody: true,
-          urlBlocklist: [],
-        },
-        enableCanvasRecording: true,
-        samplingStrategy: {
-          canvas: 5,
-          canvasMaxSnapshotDimension: 480,
-        },
-        recordCrossOriginIframe: true,
-      });
-    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -284,7 +267,7 @@
       cols="139"
     ></textarea>
     <br />
-    <button type="button" id="buttoncss" onclick="processvalues();">
+    <button type="button" id="buttoncss" onclick="processvalues()">
       RUN IT &#128640;
     </button>
     <div id="counter">
@@ -299,7 +282,7 @@
     <button onclick="copyClipboard()" id="buttoncss">
       Copy output to clipboard &#128203;
     </button>
-    <button type="button" onclick="reverseit();" id="buttoncss">
+    <button type="button" onclick="reverseit()" id="buttoncss">
       Reverse Output Order &#128260;
     </button>
     <div id="outputbox" class="output"></div>
